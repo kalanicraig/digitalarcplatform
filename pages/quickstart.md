@@ -7,7 +7,7 @@ permalink: /quickstart
 ## Before you get started
 {: .subheadline }
 
-Check out our example site at [https://idahatiu.github.io](https://idahatiu.github.io), which has example items of several different types--photos, document scans, videos--so you don't have to start from scratch.
+Check out our example site at [https://digitalarcplatform.github.io/demo/](https://digitalarcplatform.github.io/demo/), which has example items of several different types--photos, document scans, videos--so you don't have to start from scratch.
 
 The 5 steps below will guide you through making a copy of our example site and customizing it for your community.
 
@@ -27,11 +27,12 @@ The 5 steps below will guide you through making a copy of our example site and c
 ## Step 2
 {: .subheadline }
 
-**Make a copy of our template community-archive site by following this video: [https://youtu.be/aDQZ1lcpMn0](https://youtu.be/aDQZ1lcpMn0){:target="_blank"}**
+**Make a copy of our template DigitalArc platform site by following this video: [https://youtu.be/aDQZ1lcpMn0](https://youtu.be/aDQZ1lcpMn0){:target="_blank"}**
 
-1. Visit [`https://github.com/idahatiu/idahatiu.github.io`](https://github.com/idahatiu/idahatiu.github.io)
-2. Press the "Fork" button
-3. Rename your repository `yourusername.github.io` (where *yourusername* is the username you chose when you created your Github account)
+1. Log in to GitHub.
+1. Visit [`https://github.com/digitalarcplatform/template`](https://github.com/digitalarcplatform/template)
+1. Find the green "copy template" button <!--REVISE-->
+1. Name the resulting repository `yourusername.github.io` (where *yourusername* is the username you chose when you created your Github account)
 
 ## Step 3
 {: .subheadline }
@@ -41,10 +42,10 @@ The 5 steps below will guide you through making a copy of our example site and c
 The `_config.yml` file contains settings for exhibit info, font, and color choices that affect the entire web site.
 
 1. Select the `_config.yml` from the list of files in your repository.
-2. Click the pencil button to edit the file
+1. Click the pencil button to edit the file
    - Information about your community is on lines 42-63. To leave a line blank, put two quote marks together with no spaces, like so: `twitter: ""`
    - Choices for [colors]({{ site.baseurl }}/docs/colors/) and [fonts]({{ site.baseurl }}/docs/fonts/) are on lines 77-93.
-3. Scroll to the bottom and use the "commit" button (Github's version of a "save" button)
+1. Scroll to the bottom and use the "commit" button (Github's version of a "save" button)
 
 ## Step 4
 {: .subheadline }
@@ -54,10 +55,10 @@ The `_config.yml` file contains settings for exhibit info, font, and color choic
 Each item in the collection has an item ID (no spaces or punctuation) with one or more files associated with it (e.g. `0001.md`).
 
 1. Open the `_items` folder and look at one of the example items. Get a feel for what you need to gather about each item.
-2. Each item should have its own unique filename.
+1. Each item should have its own unique filename.
    - We like `YYYY-MM-DD-ItemNo` (so the 4th item collected on May 15, 2022, would be `2022-05-15-004`)
-3. Each item will have its own information file in the `_items` folder (2022-05-15-004.md) and a photo in the `/assets/items/` folder (2022-05-15-004.jpg or 2022-05-15-004.png).
-  - The file for each item in the `_items` folder has a bunch of information about each item in the first few lines. Each line has a field type (e.g. `author`), and then a colon, and then the info that goes in that field surrounded by double quotes (`author: "Drew H"`). You can get more information about what goes in these item fields in the [Metadata: Line by Line](https://community-archive.kalanicraig.com/docs#metadata-line-by-line) section of the [Theme Docs](https://community-archive.kalanicraig.com/docs).
+1. Each item will have its own information file in the `_items` folder (2022-05-15-004.md) and a photo in the `/assets/items/` folder (2022-05-15-004.jpg or 2022-05-15-004.png).
+  - The file for each item in the `_items` folder has a bunch of information about each item in the first few lines. Each line has a field type (e.g. `author`), and then a colon, and then the info that goes in that field surrounded by double quotes (`author: "Drew H"`). You can get more information about what goes in these item fields in the [Metadata: Line by Line](https://digitalarcplatform.kalanicraig.com/docs#metadata-line-by-line) section of the [Theme Docs](https://digitalarcplatform.kalanicraig.com/docs).
 
 ## Step 5
 {: .subheadline }
@@ -66,8 +67,8 @@ Each item in the collection has an item ID (no spaces or punctuation) with one o
 
 
 1. Find the "Settings" link on the top-right bar of your repository's info page
-2. Find the "Pages" link on the left-hand side of your repository's settings page
-3. Look for a text box with a green or blue background at the top that says "Your site is published" or "Your site is ready to be published"
+1. Find the "Pages" link on the left-hand side of your repository's settings page
+1. Look for a text box with a green or blue background at the top that says "Your site is published" or "Your site is ready to be published"
   - If you see a green box, you're ready to go. Click on the link!
   - If you see a blue box, wait 5 minutes and reload the page. It should be green now, and you can click on the link.
   - If you don't see either message, look for the drop-down menu that says "Branch", choose the "main" branch and press "Save" to publish your site in Github Pages.

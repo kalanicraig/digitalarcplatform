@@ -1,15 +1,15 @@
-# [Community-Archive Jekyll Theme](https://community-archive.kalanicraig.com/)
+# [DigitalArc Jekyll Theme](https://digitalarcplatform.kalanicraig.com/)
 
-[![LICENSE](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue)](https://raw.githubusercontent.com/kalanicraig/community-archive/main/LICENSE)
+[![LICENSE](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue)](https://raw.githubusercontent.com/kalanicraig/digitalarcplatform/main/LICENSE)
 [![Jekyll](https://img.shields.io/badge/jekyll-%3E%3D%203.7-blue.svg)](https://jekyllrb.com/)
 
 This repository provides a web site theme for communities in need of a free, easy-to-configure online exhibit.
 
-The easiest way to use this theme is to fork the example site at [https://github.com/idahatiu/idahatiu.github.io](https://github.com/idahatiu/idahatiu.github.io)
+The easiest way to use this theme is to use the "copy template" option in the example site at [https://github.com/digitalarcplatform/template](https://github.com/digitalarcplatform/template)
 
 [![A live preview][2]][1]
 
-[1]: https://idahatiu.github.io
+[1]: https://digitalarcplatform.github.io/demo/
 [2]: screenshot.png (live preview)
 
 ![color examples](/assets/img/CommunityArchiveColors.jpg)
@@ -45,11 +45,18 @@ Additional sample posts are available under [posts archive][year-archive] on the
 
 ## Credits
 
-### Partners
+### Development Partners
 
 - [Institute for Digital Arts & Humanities](https://idah.indiana.edu), Indiana University–Bloomington
+- [Jazma Sutton](https://miamioh.edu/profiles/cas/jazma-sutton.html), Miami University Ohio
+
+### Community-Storytelling Partners
+
+- [ImaginX en Movimiento (IXeM)](https://www.instagram.com/ixemcollective/?hl=en) co-founded by Marisa Hicks-Alcaraz
 - [Center for Research on Race, Ethnicity and Society](https://crres.indiana.edu), Indiana University–Bloomington
-- [ImaginX en Movimiento (IXeM)](https://www.instagram.com/ixemcollective/?hl=en)
+- [La Casa](https://lacasa.indiana.edu/), Indiana University Bloomington
+- [Remembering Freedom](https://longtownhistory.github.io) descendant community in Greenville and Longtown, Ohio, for the community-archive project that inspired this template.
+- [Asian Culture Center](https://asianresource.indiana.edu), Indiana University Bloomington
 
 ### Technical Resources
 

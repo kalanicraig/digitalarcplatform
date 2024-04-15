@@ -10,7 +10,7 @@ A reference with link to the Vocabulary part of this section (Theme Codes) in th
 # Table of Contents
 {: .subheadline }
 
-For the full repository, visit [https://github.com/kalanicraig/community-archive-jekyll](https://github.com/kalanicraig/community-archive-jekyll)
+For the full repository, visit [https://github.com/kalanicraig/digitalarcplatform](https://github.com/kalanicraig/digitalarcplatform)
 
 * Placeholder for Table of Content
 {:toc}
@@ -36,7 +36,7 @@ Another con in this particular theme (i.e. Tan) is that the color of the link on
 # Advance Prep
 {: .subheadline }
 
-See a sample collection at https://idahatiu.github.io/archives/
+See a sample collection at https://digitalarcplatform.github.io/demo/
 <!---
 Make this a hyperlink.
 -->
@@ -150,7 +150,7 @@ Most of the formatting for items is taken care of by individual item metadata (s
 
 To add additional text, add it below the second set of hyphens that mark the metadata at the beginning of each file.
 
-To format additional text, use markdown. We've provided [an example page]({{ site.baseurl }}/2022/05/15/a-sample-blog-post.html) and the [markdown that generates that page](https://github.com/kalanicraig/community-archive/blob/main/_posts/2022-05-15-a-sample-blog-post.md). Comparing these files side by side is the best way to learn how markdown "translates" to a web page.
+To format additional text, use markdown. We've provided [an example page]({{ site.baseurl }}/2022/05/15/a-sample-blog-post.html) and the [markdown that generates that page](https://github.com/kalanicraig/digitalarcplatform/blob/main/_posts/2022-05-15-a-sample-blog-post.md). Comparing these files side by side is the best way to learn how markdown "translates" to a web page.
 
 # Blog posts
 
@@ -245,11 +245,3 @@ For a digital exhibit with no blog, remove the Blog entry in the `_navigation.ym
     ├── index.md
     └── quickstart.md
 ```
-<!--# Theme Doc Info for Pushing Theme to remote status
-
-- ***https://jekyllrb.com/docs/themes/#creating-a-gem-based-theme***
-- https://www.siteleaf.com/blog/making-your-first-jekyll-theme-part-2/
-- https://github.com/benbalter/jekyll-remote-theme
-- https://jekyllrb.com/docs/themes/
-- https://webdesign.tutsplus.com/tutorials/how-to-create-and-publish-a-jekyll-theme-gem--cms-27475
--->

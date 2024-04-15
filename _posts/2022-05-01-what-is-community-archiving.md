@@ -6,7 +6,7 @@
 
 layout: post
 title: What is Community Archiving
-excerpt: This sample blog post explores community archiving and links to a few example community-archive sites
+excerpt: This sample blog post explores community archiving and links to a few example community-archive sites that use the DigitalArc Jekyll Theme
 author: kalani-craig
 pullquote: "Find out more about community archiving!"
 ---
