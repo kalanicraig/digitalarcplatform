@@ -1,0 +1,31 @@
+---
+layout: default
+format: homepage
+---
+
+<div class="darkbg">
+<div class="grid-container">
+<h4 class="center">{{ site.subtitle }}</h4>
+<h1 class="center siteheader subheadline">{{ site.title }}</h1>
+</div>
+</div>
+
+<div class="grid-container">
+<div class="grid-x grid-padding-x align-middle">
+<div class="cell medium-8 align-right small-order-2 medium-order-1 large-order-1 align-middle" markdown="1" >
+
+{% if page.pullquote != empty %}<span class="pull-quote"><p>{{page.pullquote}}</p>{% if page.quoteattribution != empty %}<p class="quiet">--{{page.quoteattribution}}</p>{%endif%}</span>{%endif%}
+
+{{ content }}
+
+</div>
+<div class="cell medium-4 align-left small-order-1 medium-order-2 large-order-2">
+
+<img src="{{ site.baseurl }}{{ site.urlimg }}{{ site.sitelogo }}" class="thumbnail">
+
+<div class="address">
+  	<hr><p style="text-align:center">{% if site.email != blank%}<em>{{ site.email }}</em>{%endif%}</p><hr>
+</div>
+</div>
+</div>
+</div>

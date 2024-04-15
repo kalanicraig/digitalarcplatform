@@ -1,0 +1,25 @@
+﻿{% capture timestamp %}January 1, {{site.sitedate}}{% endcapture %}
+{% assign SiteYear = timestamp | date: "%Y" %}
+{% assign NowYear = "now" | date: "%Y" %}
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+{% include _head.html %}
+</head>
+<body id="the-body">
+
+
+{% include _header-and-nav.html %}
+
+<!--default start-->
+{{ content }}
+<!--default end-->
+
+{% include _footer.html %}
+    <script src="{{ site.baseurl }}/assets/js/vendor/jquery.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/vendor/what-input.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/vendor/foundation.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/app.js"></script>
+  </body>
+</html>
+

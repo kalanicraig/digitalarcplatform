@@ -1,0 +1,41 @@
+/** == NAVY AND GRAY Color Palette
+<palette>
+  <color name="Jet" hex="353535" r="53" g="53" b="53" />
+  <color name="Cadet Blue" hex="549da0" r="84" g="157" b="160" />
+  <color name="White" hex="ffffff" r="255" g="255" b="255" />
+  <color name="Gainsboro" hex="d9d9d9" r="217" g="217" b="217" />
+  <color name="Indigo Dye" hex="294e66" r="41" g="78" b="102" />
+</palette>
+
+<!-- Coolors Palette Widget -->
+      <script src="https://coolors.co/palette-widget/widget.js"></script>
+      <script data-id="05875225772800331">new CoolorsPaletteWidget("05875225772800331", ["353535","549da0","ffffff","d9d9d9","294e66"]); </script>
+
+/* SCSS HEX */
+
+$jet: #353535;
+$cadet-blue: #549da0;
+$white: #ffffff;
+$gainsboro: #d9d9d9;
+$indigo-dye: #294e66;
+
+/** main color scheme **/
+$main-text-color: $jet;
+$main-bg: $white;
+$main-link: $cadet-blue;
+$main-link-hover: $indigo-dye;
+$main-headers: $cadet-blue;
+
+/** dark-background color scheme **/
+$dark-text-color: $white;
+$dark-bg: $indigo-dye;
+$dark-link: $gainsboro;
+$dark-link-hover: $cadet-blue;
+$dark-headers: $gainsboro;
+
+/** accent-background color scheme **/
+$accent-text-color: $jet;
+$accent-bg: $gainsboro;
+$accent-link: $indigo-dye;
+$accent-link-hover: $cadet-blue;
+$accent-headers: $indigo-dye;

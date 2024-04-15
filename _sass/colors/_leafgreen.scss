@@ -1,0 +1,41 @@
+/** == BROWN AND GREEN Color Palette
+<palette>
+  <color name="Dark Lava" hex="483b32" r="72" g="59" b="50" />
+  <color name="Middle Green Yellow" hex="abbf73" r="171" g="191" b="115" />
+  <color name="Floral White" hex="faf8f0" r="250" g="248" b="240" />
+  <color name="Pale Spring Bud" hex="dde5b6" r="221" g="229" b="182" />
+  <color name="Coyote Brown" hex="836249" r="131" g="98" b="73" />
+</palette>
+
+<!-- Coolors Palette Widget -->
+      <script src="https://coolors.co/palette-widget/widget.js"></script>
+      <script data-id="02255110307697208">new CoolorsPaletteWidget("02255110307697208", ["483b32","abbf73","faf8f0","dde5b6","836249"]); </script>
+**/
+
+/* SCSS HEX */
+$dark-lava: #483b32;
+$middle-green-yellow: #abbf73;
+$floral-white: #faf8f0;
+$pale-spring-bud: #dde5b6;
+$coyote-brown: #836249;
+
+/** main color scheme **/
+$main-text-color: $dark-lava;
+$main-bg: $floral-white;
+$main-link: $middle-green-yellow;
+$main-link-hover: $coyote-brown;
+$main-headers: $middle-green-yellow;
+
+/** dark-background color scheme **/
+$dark-text-color: $floral-white;
+$dark-bg: $dark-lava;
+$dark-link: $pale-spring-bud;
+$dark-link-hover: $middle-green-yellow;
+$dark-headers: $pale-spring-bud;
+
+/** accent-background color scheme **/
+$accent-text-color: $dark-lava;
+$accent-bg: $pale-spring-bud;
+$accent-link: $coyote-brown;
+$accent-link-hover: $middle-green-yellow;
+$accent-headers: $coyote-brown;

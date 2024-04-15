@@ -1,0 +1,41 @@
+/** == ORANGE AND TAN Color Palette
+<palette>
+  <color name="Eerie Black" hex="252422" r="37" g="36" b="34" />
+  <color name="Flame" hex="eb5e28" r="235" g="94" b="40" />
+  <color name="Baby Powder" hex="fffbf7" r="255" g="251" b="247" />
+  <color name="Timberwolf" hex="dcd0cc" r="220" g="208" b="204" />
+  <color name="Davys Grey" hex="4c4843" r="76" g="72" b="67" />
+</palette>
+
+<!-- Coolors Palette Widget -->
+      <script src="https://coolors.co/palette-widget/widget.js"></script>
+      <script data-id="01621724130939607">new CoolorsPaletteWidget("01621724130939607", ["252422","eb5e28","fffbf7","dcd0cc","4c4843"]); </script>
+**/
+
+/* SCSS HEX */
+$eerie-black: #252422;
+$flame: #eb5e28;
+$baby-powder: #fffbf7;
+$timberwolf: #dcd0cc;
+$davys-grey: #4c4843;
+
+/** main color scheme **/
+$main-text-color: $eerie-black;
+$main-bg: $baby-powder;
+$main-link: $flame;
+$main-link-hover: $davys-grey;
+$main-headers: $flame;
+
+/** dark-background color scheme **/
+$dark-text-color: $baby-powder;
+$dark-bg: $eerie-black;
+$dark-link: $timberwolf;
+$dark-link-hover: $flame;
+$dark-headers: $timberwolf;
+
+/** accent-background color scheme **/
+$accent-text-color: $eerie-black;
+$accent-bg: $timberwolf;
+$accent-link: $davys-grey;
+$accent-link-hover: $flame;
+$accent-headers: $davys-grey;

@@ -1,0 +1,36 @@
+{% capture FileName %}{{ item.url | split: '/' | last }}{% endcapture %}
+{% capture ItemID %}{{ FileName | split: '.' | first }}{% endcapture %}
+
+{% assign catlist = "" | split: ',' %}
+{% if item.categories %}
+{% for cat in item.categories %}
+{% assign catdash = cat | replace: " ", "-" %}
+{% assign catlist = catlist | push: catdash %}
+{% endfor %}
+{% assign uniquetags = catlist | uniq %}
+{%endif%}
+
+
+	{% if item.itemphoto %}
+		{% assign ItemPhotoResult = item.photo %}
+	{% elsif ItemImagePath %}
+		{% capture ItemImagePath %}{{ urlitemimg }}{{ ItemID }}{% endcapture %}
+		{% for static_file in site.static_files %}
+			{% if static_file.path contains ItemImagePath %}
+				{% capture ItemPhotoResult %}{{site.baseurl}}{{static_file.path}}{% endcapture %}
+				{% break %}
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+
+	<div class="cell small-12 medium-6 large-4 card filter-simple-item {% if item.group%}{{item.group}} {% endif %}{% if uniquetags%}{{ uniquetags | join: " " }}{% endif %}">
+	{% if ItemPhotoResult != empty %}
+	<div class="card-thumbnail">
+		<a href="{{ site.baseurl }}{{ item.url }}">
+		<img class="square thumbnail" src="{{ ItemPhotoResult }}" alt="{{ page.title }}""/></a>
+	</div>
+	{% endif %}
+  <h3 class="card-title accentbg"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></h3>
+  {%if item.contributor %}<h4 class="card-contributor">{{ item.contributor }}</h4>{% endif %}
+  <p class="card-desc">{{ item.shortdesc | strip_html | truncatewords:30 }} (<a href="{{ site.baseurl }}{{ item.url }}">read more...</a>)</p>
+</div>

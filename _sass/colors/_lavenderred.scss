@@ -1,0 +1,41 @@
+/** == LAVENDER AND RED Color Palette
+<palette>
+  <color name="Gunmetal" hex="2b303a" r="43" g="48" b="58" />
+  <color name="Cinnabar" hex="d64933" r="214" g="73" b="51" />
+  <color name="Lavender Blush" hex="eee5e9" r="238" g="229" b="233" />
+  <color name="Middle Blue" hex="92dce5" r="146" g="220" b="229" />
+  <color name="Gray Web" hex="7c7c7c" r="124" g="124" b="124" />
+</palette>
+
+<!-- Coolors Palette Widget -->
+      <script src="https://coolors.co/palette-widget/widget.js"></script>
+      <script data-id="05987572020110035">new CoolorsPaletteWidget("05987572020110035", ["2b303a","d64933","eee5e9","92dce5","7c7c7c"]); </script>
+**/
+
+/* SCSS HEX */
+$gunmetal: #2b303a;
+$cinnabar: #d64933;
+$lavender-blush: #eee5e9;
+$middle-blue: #92dce5;
+$gray-web: #7c7c7c;
+
+/** main color scheme **/
+$main-text-color: $gunmetal;
+$main-bg: $lavender-blush;
+$main-link: $cinnabar;
+$main-link-hover: $gray-web;
+$main-headers: $cinnabar;
+
+/** dark-background color scheme **/
+$dark-text-color: $lavender-blush;
+$dark-bg: $gunmetal;
+$dark-link: $middle-blue;
+$dark-link-hover: $cinnabar;
+$dark-headers: $middle-blue;
+
+/** accent-background color scheme **/
+$accent-text-color: $gunmetal;
+$accent-bg: $middle-blue;
+$accent-link: $gray-web;
+$accent-link-hover: $cinnabar;
+$accent-headers: $gray-web;

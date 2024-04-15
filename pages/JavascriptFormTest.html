@@ -1,0 +1,383 @@
+---
+title: Community-Archive Jekyll Theme
+layout: page
+permalink: /ConfigForm/
+pullquote: "You're 5 steps from a community archive!"
+quoteattribution: ""
+---
+
+
+<h2>Create your site's configuration file</h2>
+  
+<p>The `_config.yml` file in your new community archive site sets a bunch of display information automatically, from your site's title to your font and color choices.</p>
+
+<p>This form will generate and save a `_config.yml` file for you that you can upload to your new GitHub site.</p>
+
+<form id="Config" onsubmit="return getVals()">
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="medium-12 cell">
+      	<h3 class="subheadline">About Your New Site</h3>
+      </div>
+      <div class="medium-6 cell">
+
+		  <label>Site Title *
+			<input type="text" id="site_title" name="site_title input" placeholder="Required. A 3-4 word title for your project." aria-required=”true” aria-describedby="site_titleHelpText">
+		  </label>
+		  <p class="help-text" id="site_titleHelpText">Required. A 3-4 word title for your project.</p>
+      </div>
+
+      <div class="medium-6 cell">
+		  <label>Site subtitle
+			<input type="text" id="site_subtitle" name="site_subtitle input" placeholder="Optional. A subtitle that clarifies your project's goals." aria-describedby="site_subtitleHelpText">
+		  </label>
+		  <p class="help-text" id="site_subtitleHelpText">Optional. A subtitle that  your main title more clear.</p>
+      </div>
+
+      <div class="medium-6 cell">
+		  <label>Your github repository
+			<input type="text" id="site_repo" name="site_repo input" placeholder="idahatiu/idahatiu.github.io" aria-describedby="site_repoHelpText">
+		  </label>
+		  <p class="help-text" id="site_repoText">Recommended. Your github username, a forward slash (/) and your repository name</p>
+      </div>
+
+      <div class="medium-6 cell">
+		  <label>Site owner
+			<input type="text" id="site_owner" name="site_owner input" placeholder="A community name, or your name." aria-describedby="site_ownerHelpText">
+		  </label>
+		  <p class="help-text" id="site_ownerHelpText">Recommended. A community name, or your name, depending on who the main site author will be</p>
+      </div>
+
+      <div class="medium-12 cell">
+		  <label>Site description
+			<textarea id="site_desc" name="site_desc input" placeholder="A longer description (max 150 words) that helps search engines find your project." placeholder="A longer description (max 150 words) that helps search engines find your project." aria-describedby="site_descHelpText"></textarea>
+		  </label>
+		  <p class="help-text" id="site_descHelpText">Recommended. A longer description (max 150 words) that helps search engines find your project.</p>
+      </div>
+
+       <div class="medium-6 cell">
+		  <label>Start Date
+			<input type="text" id="site_start" name="site_owner input" placeholder="A 4-digit year." aria-describedby="site_startHelpText">
+		  </label>
+		  <p class="help-text" id="site_startHelpText">Required. A 4-digit year, so the copyright reflects the date you started your project.</p>
+      </div>
+
+       <div class="medium-6 cell">
+		  <label>Site Visitor Tracking
+			<input type="text" id="site_googleg4" name="site_googleg4 input" placeholder="A 4-digit year." aria-describedby="site_googleg4HelpText">
+		  </label>
+		  <p class="help-text" id="site_googleg4HelpText">Optional. A <a href="https://analytics.google.com/" target="_blank">
+		  Google Analytics G4</a> tag will help you see how many people visit your site.</p>
+      </div>
+
+     <div class="medium-12 cell">
+      	<h3 class="subheadline">Styling Your New Site</h3>
+      </div>
+      <div class="medium-6 cell">
+			<label>Font choice
+			  <select id="fontchoice" name="fontchoice input" placeholder="A community name, or your name." aria-describedby="fontchoiceHelpText">
+				<option value="archivonarrow">Archivo Narrow (narrow and sleek)</option>
+				<option value="baloo">Baloo (rounded and playful)</option>
+				<option value="quattrocento">Quattrocento (transitional classic)</option>
+				<option value="raleway">Raleway (elegant but modern)</option>
+				<option value="roboto">Roboto (mid-century modern)</option>
+				<option value="slab">Slab (funky modern)</option>
+				<option value="source">Source (modern serif)</option>
+			  </select>
+			</label>
+		  <p class="help-text" id="fontchoiceHelpText">Required. Choose from our preset font options. <a href="/docs/fonts/" target="_blank">View those options here</a></p>
+      </div>
+
+      <div class="medium-6 cell">
+			<label>Color choice
+			  <select id="colorchoice" name="colorchoice input" placeholder="A community name, or your name." aria-describedby="colorchoiceHelpText">
+				<option value="dusk">Dusky purple and olive green</option>
+				<option value="lavenderred">Purple-grey with orange-red</option>
+				<option value="marigold">Near-black with marigold yellow</option>
+				<option value="navy">Navy with bright teal and grey</option>
+				<option value="red">Black, crimson and grey</option>
+				<option value="tan">Tan and deep brown with flame-bright orange</option>
+				<option value="teal">Bright teal with bright orange-yellow accents</option>
+			  </select>
+			</label>
+		  <p class="help-text" id="colorchoiceHelpText">Required. Choose from our preset color options. <a href="/docs/colors/" target="_blank">View those options here</a></p>
+		</div>
+
+      <div class="medium-12 cell">
+      	<h3 class="subheadline">Linking to Social Media</h3>
+      </div>
+      <div class="medium-6 cell">
+		  <label>Twitter
+			<input type="text" id="site_twitter" name="site_twitter input" placeholder="A 4-digit year." aria-describedby="site_twitterHelpText">
+		  </label>
+		  <p class="help-text" id="site_twitterHelpText">Optional. Your Twitter username</p>
+      </div>
+
+      <div class="medium-6 cell">
+		  <label>Facebook
+			<input type="text" id="site_facebook" name="site_facebook input" placeholder="A 4-digit year." aria-describedby="site_facebookHelpText">
+		  </label>
+		  <p class="help-text" id="site_facebookHelpText">Optional. Your Facebook username</p>
+      </div>
+
+      <div class="medium-6 cell">
+		  <label>Instagram
+			<input type="text" id="site_instagram" name="site_instagram input" placeholder="A 4-digit year." aria-describedby="site_instagramHelpText">
+		  </label>
+		  <p class="help-text" id="site_instagramHelpText">Optional. Your Instagram username</p>
+      </div>
+
+      <div class="medium-6 cell">
+		  <label>Github
+			<input type="text" id="site_github" name="site_github input" placeholder="A 4-digit year." aria-describedby="site_githubHelpText">
+		  </label>
+		  <p class="help-text" id="site_githubHelpText">Optional. Your Github username</p>
+      </div>
+
+      <div class="medium-6 cell">
+		  <label>Email
+			<input type="text" id="site_email" name="site_email input" placeholder="A 4-digit year." aria-describedby="site_emailHelpText">
+		  </label>
+		  <p class="help-text" id="site_emailHelpText">Optional. An email, if you want site visitors to contact you.</p>
+      </div>
+
+      <div class="medium-6 cell">
+		  <label>Website
+			<input type="text" id="site_website" name="site_website input" placeholder="A 4-digit year." aria-describedby="site_websiteHelpText">
+		  </label>
+		  <p class="help-text" id="site_websiteHelpText">Optional. An external website if you'd like to direct visitors to a second site.</p>
+      </div>
+
+    </div>
+  </div>
+
+
+<input class="button round" id="bt" type="button" value="Save Config File" onclick = "startDownload()" />
+</form>
+
+
+<script src="https://coolors.co/palette-widget/widget.js"></script>
+      <script data-id="01621724130939607">new CoolorsPaletteWidget("01621724130939607", ["252422","eb5e28","fffbf7","dcd0cc","4c4843"]); </script>      
+      
+<script>
+
+var ConfigYMLTemplate = `
+##############################################
+# START YOUR CONFIGURATION HERE! For more info, visit https://community-archive.kalanicraig.com/quickstart
+#---------------------
+# THEME. Leave Lines 4-6 alone.
+#---------------------
+remote_theme: kalanicraig/community-archive-jekyll
+repository: 'REPONAME' # change this to your repository name
+
+##############################################
+# WHAT IS ALL THIS STUFF?
+#---------------------
+# _config is easy. Most web sites have configuration files.
+# .yml means YAML. It's the data that runs your site.
+# Some files, like this one, are entirely made up of YAML.
+# Lines with information that isn't YAML are commented out; the lines start with #
+# Those lines will be ignored by the computer but provide important information to you.
+#
+##############################################
+# WHAT DO I DO NOW?
+#---------------------
+# Look for the lines that have a bunch of ### in row.
+# These break _config.yml into sections.
+# You'll need to do something slightly different in each section.
+# If you see an instruction to "comment out", add a # to the beginning of the line(s).
+# If you see an instruction to "uncomment", remove the # at the beginning of the line(s).
+
+##############################################
+# THE MOST IMPORTANT THING TO REMEMBER
+#---------------------
+# Variables are the things that drive your site.
+# In YAML, there's a variable name--a placeholder--at the beginning of the line.
+# Variables have colons after them in YAML.
+# After the variable comes the actual contents of the variable, usually in double quotes
+#               title: "Your Site Title"
+# If you use another double quote inside your variable, it will break this config file.
+#               title: "My "So-Called" Website"
+#
+##############################################
+# START CUSTOMIZING YOUR SITE HERE
+##############################################
+# ABOUT YOUR SITE
+#---------------------
+
+# Title of your website
+title: "SITETITLE"
+
+# Subtitle of your website. Leave blank if you want to.
+subtitle: "SITESUBTITLE"
+
+# A longer description of your site (max 150 words). Helps search engines find you.
+description: "SITEDESCRIPTION"
+
+# These credits show up in the includes/_footer.html
+# Main author of the website.
+author: "SITEAUTHORSHORT"
+authorname : "SITEAUTHORFULL"
+sitelogo: "site_logo.png"
+
+# What year did you start up this community project?
+sitedate : SITEDATESTART
+
+# Other community social media. Leave blank if you don't have these.
+email : "SITEEMAIL"
+website : "SITEWEBSITE"
+twitter : "SITETWITTER"
+github : "SITEGITHUB"
+facebook : "SITEFACEBOOK"
+instagram : "SITEINSTAGRAM"
+
+# If you need to know how many people visit your site, go to https://analytics.google.com/
+# When you finish the setup assistant, it will give you a Measurement ID: G-ABCDEFGHIJ
+google_g4_analytics_id: SITEGOOGLEANALYTICSG4
+
+##############################################
+# FONTS AND COLORS
+#---------------------
+
+# Choose the FONTS you'd like to use.
+# You can see these font choices in action at https://community-archive.kalanicraig.com/docs/
+# Uncomment the line for the font you like. Comment out all of the other lines.
+
+#fontchoice: archivonarrow # A narrow sans-serif font for headlines and body text
+#fontchoice: baloo # A clean sans-serif font with a playful rounded sans-serif accent
+#fontchoice: quattrocento # A modern sans-serif font with classic serif accents
+#fontchoice: raleway # An elegant sans-serif font with bold sans-serif accents
+#fontchoice: roboto # A clean sans-serif font with simple serif accents
+#fontchoice: slab # A funky slab font with clean sans-serif accents
+#fontchoice: source # A modern serif font with clean sans-serif accents
+
+fontchoice: SITEFONTCHOICE
+
+# Choose the COLORS you'd like to use.
+# You can see these color choices in action at https://community-archive.kalanicraig.com/docs/
+# Uncomment the line for the color you like. Comment out all of the other lines.
+
+#colorchoice: navy # Navy with bright teal and grey
+#colorchoice: leafgreen # Leafy green and medium brown
+#colorchoice: tan # Tan and deep brown with flame-bright orange
+#colorchoice: teal # Bright teal with bright orange-yellow accents
+#colorchoice: marigold # Near-black with marigold yellow
+#colorchoice: red # Black, crimson and grey
+#colorchoice: lavenderred # Purple-grey with orange-red
+#colorchoice: dusk # Dusky purple and olive green
+
+colorchoice: SITECOLORCHOICE
+
+##############################################
+# ORGANIZING YOUR COLLECTION
+#---------------------
+# These collections take the basic files you put together for each item in your collection and auto-group and display them.
+# This takes each item in your archive collection and displays it
+collections:
+  items:
+    output: true
+    permalink: /:collection/:path:output_ext
+    contributor: true
+    creator: true
+    group: true
+  reception:
+    output: true
+    permalink: /:collection/:path:output_ext
+# If your collection items need to be grouped by person, family or some other group, uncomment this collection
+#  groups:
+#    output: true
+#    permalink: /:collection/:path:output_ext
+#    name: true
+#    folder: true
+#    sort_by: folder
+# If you have oral histories that go with groups, uncomment this collection:
+#  oralhistories:
+#    output: true
+#    permalink: /:collection/:path:output_ext
+#    name: true
+#    folder: true
+#    sort_by: folder
+  authors:
+    output: false
+    name: true
+
+##############################################
+# WEBSITE ORGANIZATION
+#---------------------
+# MOST OF THESE THINGS DON'T NEED TO BE CHANGED.
+##############################################
+
+# This URL is the main address for absolute links. This will usually be blank.
+url: 
+# If this archive will be in a folder (kalanicraig.com/community-archive/) instead of in its own main site (idahatiu.github.io) add that folder name here. This will usually be blank.
+baseurl: 
+
+# This URL points directly to the images directory. It needs a slash at the end.
+#
+# Example: <img src="{{ site.url }}{{ site.baseurl }}{{ site.urlimg }}{{ post.image.title }}" />
+# Markdown-Example for posts ![Image Text]({{ site.url }}{{ site.baseurl }}{{ site.urlimg }}image.jpg)
+#
+urlimg: '/assets/img/'
+urlitemimg: '/assets/items/'
+urlreceptionimg: '/assets/reception/'
+permalink: /:categories/:year/:month/:day/:title:output_ext
+
+markdown : kramdown
+syntax_highlighter: rouge
+
+# This URL points directly to the images directory. It needs a slash at the end.
+exclude :
+    - Gemfile
+    - Gemfile.lock
+    - CNAME
+    - LICENSE
+    - README.md
+    - INSTALL.md
+    - vendor/bundle
+include: ['_pages']
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag
+  
+`;
+
+  function startDownload() {
+	 // access the text from the input fields
+	var formEl = document.forms.Config;
+	var formData = new FormData(formEl);
+
+	var find = ["REPONAME", "SITETITLE", "SITESUBTITLE", "SITEDESCRIPTION", "SITEAUTHORSHORT", "SITEAUTHORFULL", "SITEEMAIL", "SITEWEBSITE", "SITETWITTER", "SITEGITHUB", "SITEFACEBOOK", "SITEINSTAGRAM", "SITEGOOGLEANALYTICSG4", "SITEFONTCHOICE", "SITECOLORCHOICE"];
+	var replace = [document.getElementById("site_repo").value, document.getElementById("site_title").value, document.getElementById("site_subtitle").value, document.getElementById("site_desc").value, "SITEAUTHORSHORT", document.getElementById("site_owner").value, document.getElementById("site_email").value, document.getElementById("site_website").value, document.getElementById("site_twitter").value, document.getElementById("site_github").value, document.getElementById("site_facebook").value, document.getElementById("site_instagram").value, document.getElementById("site_googleg4").value, document.getElementById("fontchoice").value, document.getElementById("colorchoice").value];
+	
+String.prototype.replaceArray = function(find, replace) {
+  var replaceString = this;
+  for (var i = 0; i < find.length; i++) {
+    replaceString = replaceString.replace(find[i], replace[i]);
+  }
+  return replaceString;
+};
+	ConfigYMLTemplate = ConfigYMLTemplate.replaceArray(find, replace);
+	 
+	 // Create dummy <a> element using JavaScript.
+	 var hidden_a = document.createElement('a');
+	 
+	 // add texts as a href of <a> element after encoding.
+	 hidden_a.setAttribute('href', 'data:text/plain;charset=utf-8, '+ encodeURIComponent(ConfigYMLTemplate));
+	 
+	 // also set the value of the download attribute
+	 hidden_a.setAttribute('download', "_config.yml");
+	 document.body.appendChild(hidden_a);
+	 
+	 // click the link element
+	 hidden_a.click();
+	 document.body.removeChild(hidden_a);
+  }
+
+
+</script>
+</body>
+</html>

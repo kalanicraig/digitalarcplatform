@@ -1,0 +1,75 @@
+---
+layout: page
+format: item
+---
+{% capture FileName %}{{ page.url | split: '/' | last }}{% endcapture %}
+{% capture ItemID %}{{ FileName | split: '.' | first }}{% endcapture %}
+<div class="grid-container">
+	<div class="grid-x grid-padding-x">
+		<div class="large-12 cell">
+			<!--page-->
+
+{% if item.photo %}
+	{% assign ItemPhotoResult = item.photo %}
+{% else %}
+	{% capture ItemImagePath %}{{ urlitemimg }}{{ ItemID }}{% endcapture %}
+	{% for static_file in site.static_files %}
+		{% if static_file.path contains ItemImagePath %}
+			{% capture ItemPhotoResult %}{{site.baseurl}}{{static_file.path}}{% endcapture %}
+			{% break %}
+		{% endif %}
+	{% endfor %}
+{% endif %}
+
+
+{% if page.embedurl %}
+<div class="responsive-embed">
+  <iframe width="420" height="315" src="{{ page.embedurl }}" frameborder="0" allowfullscreen></iframe>
+</div>
+{% elsif ItemPhotoResult %}
+<img class="article-image float-right thumbnail" src="{{ ItemPhotoResult }}" alt="{{ page.title }}""/>{% endif %}
+
+{% if page.contributor %}<h2>Object contributed by {{ page.contributor }}</h2>{% endif %}
+
+{% if page.contributorquote %}<q class="pull-quote">"{{ page.contributorquote }}"</q>{% endif %}
+
+{% if page.creator %}<h4>Originally created by {{ page.creator }}</h4>{% endif %}
+
+{% if page.externalurl %}<p>Find out more at {{ page.externalurl }}{% endif %}
+
+{% if page.embedurl %}<p>EMBED ME {{ page.embedurl }}{% endif %}
+
+{% if page.format == "media" %}<p>{{ page.embedurl }}{% endif %}
+
+{% if page.teammember %}<p>Assistance collecting this object by {{ page.teammember }}</p>{% endif %}
+
+{{ content }}
+
+{% capture ItemImagePath %}{{ urlitemimg }}{{ ItemID }}{% endcapture %}
+{% for static_file in site.static_files %}
+{% if static_file.path contains ItemImagePath %}
+{% unless static_file.path contains '_th' %}
+{% capture ItemPhotoResult %}{{site.baseurl}}{{static_file.path}}{% endcapture %}
+<img class="featured-image img-fluid" src="{{ ItemPhotoResult }}" alt="{{ page.title }}">
+{% endunless %}
+{% endif %}
+{% endfor %}
+
+
+<div class="element-set">
+<h2 id="Dublin Core">More about this item</h2>
+<p class="quiet">Dublin Core</p>
+<table class="stack">
+<tr><td><div id="dublin-core-title" class="element">Title</div></td><td>{%if page.externalurl %}<a href="{{ page.externalurl }}" target="_blank">{% endif %}<div class="element-text">{{ page.title }}</div>{%if page.url %}</a>{% endif %}</td></tr>
+<tr><td><div id="dublin-core-description" class="element">Description</div></td><td><div class="element-text">{{ page.shortdesc }}</div></td></tr>
+<tr><td><div id="dublin-core-creator" class="element">Creator</div></td><td><div class="element-text">{{ page.creator }}</div></td></tr>
+<tr><td><div id="dublin-core-contributor" class="element">Contributor</div></td><td><div class="element-text">{{ page.contributor }}</div></td></tr>
+<tr><td><div id="dublin-core-date" class="element">Creation Date</div></td><td><div class="element-text">{{ page.creationdate }}</div></td></tr>
+</table>
+</div>
+
+<!-- {: .my-class } -->  
+
+		</div>
+	</div>
+</div>

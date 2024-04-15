@@ -1,0 +1,40 @@
+/** == ORANGE AND TAN Color Palette
+<palette>
+  <color name="Pine Tree" hex="313628" r="49" g="54" b="40" />
+  <color name="Laurel Green" hex="a6ae98" r="166" g="174" b="152" />
+  <color name="Ivory" hex="#f7faf0" r="247" g="250" b="240" />
+  <color name="Middle Grey" hex="979187" r="151" g="145" b="135" />
+  <color name="Dark Liver" hex="544f53" r="84" g="79" b="83" />
+</palette>
+<!-- Coolors Palette Widget -->
+      <script src="https://coolors.co/palette-widget/widget.js"></script>
+      <script data-id="03768526682767458">new CoolorsPaletteWidget("03768526682767458", ["313628","a6ae98","f7faf0","979187","544f53"]); </script>
+**/
+
+/* SCSS HEX */
+$pine-tree: #313628;
+$laurel-green: #a6ae98;
+$ivory: #f7faf0;
+$middle-grey: #979187;
+$dark-liver: #544f53;
+
+/** main color scheme **/
+$main-text-color: $dark-liver;
+$main-bg: $ivory;
+$main-link: $laurel-green;
+$main-link-hover: $dark-liver;
+$main-headers: $laurel-green;
+
+/** dark-background color scheme **/
+$dark-text-color: $ivory;
+$dark-bg: $dark-liver;
+$dark-link: $middle-grey;
+$dark-link-hover: $laurel-green;
+$dark-headers: $middle-grey;
+
+/** accent-background color scheme **/
+$accent-text-color: $pine-tree;
+$accent-bg: $middle-grey;
+$accent-link: $dark-liver;
+$accent-link-hover: $laurel-green;
+$accent-headers: $dark-liver;

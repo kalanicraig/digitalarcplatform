@@ -1,0 +1,36 @@
+<!-- Sample 1-->
+<!-- Posts panel container -->
+<div class="posts-panel">
+
+  <!-- Panel's content -->
+  <div class="panel-content">
+
+    <!-- Posts list -->
+    <section class="posts-list">
+{% for post in site.posts %}
+      <div class="post-item">
+        <a href="#" class="post-thumbnail">
+          {% if post.image %}<img class="thumbnail" src="{{ site.baseurl }}{{ site.urlimg }}{{ post.image }}" alt="">{% endif %}
+        </a>
+        <div class="post-text">
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            <h3 class="post-title card-title accentbg">{{ post.title }}</h3>
+          </a>
+          <div class="post-meta">
+			 {% if post.author %}
+				{% assign author = site.data.authors[post.author] %}
+		<span class="meta"><span class="meta-icon fa fa-user-circle-o" aria-hidden="true"></span>{% if author.website %}<a class="meta-text" href="{{ author.website }}" target="_blank">{%endif%}{{ author.name }}{% if author.website %}</a>{% endif %}</span>{% endif %}
+            <span class="meta"><span class="meta-icon fa fa-clock-o" aria-hidden="true"></span><span class="meta-text">{{ post.date | date: "%d %B %Y"}}</span></span>
+          </div>
+          <div class="post-summary">
+            <p>{{ post.excerpt | strip_html | truncatewords:30 }} 
+              <a href="{{ site.baseurl }}{{ post.url }}" class="post-read-more">Read more<span class="fa fa-chevron-circle-right" aria-hidden="true"></span></a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+{% endfor %}
+    </section>
+  </div>
+</div>

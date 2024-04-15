@@ -1,0 +1,26 @@
+---
+layout: default
+format: post
+---
+
+<div class="darkbg">
+<div class="grid-container">
+<h4 class="center">Community Updates</h4>
+<h1 class="sans center">{{page.title}}</h1>
+</div>
+</div>
+
+
+<div class="grid-container">
+	<div class="grid-x grid-padding-x">
+		<div class="large-12 cell">
+
+				  {% if page.image %}<img class="article-image float-right thumbnail" src="{{ site.baseurl }}{{ site.urlimg }}{{page.image}}">{% endif %}
+				<!--page start-->
+				{{ content }}
+				<!--page end-->
+			</div>
+		</div>
+	</div>
+</div>
+

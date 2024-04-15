@@ -1,0 +1,23 @@
+---
+layout: page
+format: collection
+---
+
+	<div class="large-12 cell">
+		<!--collection start-->
+
+		{{ content }}
+
+		<!--collection end-->
+	</div>
+</div>
+<div class="grid-container">
+	<div class="grid-x grid-padding-x grid-margin-x">
+
+	{% if page.url contains "blog" %}{% include _postlist.html %}
+	{% else %}{% include _itemlist.html %}
+	{% endif %}
+
+		</div>
+	</div>
+</div>

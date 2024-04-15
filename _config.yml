@@ -1,0 +1,171 @@
+# NEEDS SOME INTRO: A "Why are we here" section
+
+# THEME.
+#---------------------
+#remote-theme: digitalarcplatform
+
+##############################################
+# WHAT IS ALL THIS STUFF?
+#---------------------
+# _config is easy. Most web sites have configuration files.
+# .yml means YAML. It's the data that runs your site.
+# Some files, like this one, are entirely made up of YAML.
+# Lines with information that isn't YAML are commented out; the lines start with #
+# Those lines will be ignored by the computer but provide important information to you.
+#
+##############################################
+# WHAT DO I DO NOW?
+#---------------------
+# Look for the lines that have a bunch of ### in row.
+# These break _config.yml into sections.
+# You'll need to do something slightly different in each section.
+# If you see an instruction to "comment out", add a # to the beginning of the line(s).
+# If you see an instruction to "uncomment", remove the # at the beginning of the line(s).
+
+##############################################
+# THE MOST IMPORTANT THING TO REMEMBER
+#---------------------
+# Variables are the things that drive your site.
+# In YAML, there's a variable name--a placeholder--at the beginning of the line.
+# Variables have colons after them in YAML.
+# After the variable comes the actual contents of the variable, usually in double quotes
+#               title: "Your Site Title"
+# If you use another double quote inside your variable, it will break this config file.
+#               title: "My "So-Called" Website"
+#
+##############################################
+# START CUSTOMIZING YOUR SITE HERE
+##############################################
+# ABOUT YOUR SITE
+#---------------------
+
+# Title of your website
+title: "DigitalArc Jekyll Theme"
+
+# Subtitle of your website. Leave blank if you want to.
+subtitle: "An exhibit platform for collective storytelling & community archives"
+
+# A longer description of your site (max 150 words). Helps search engines find you.
+description: "DigitalArc is an exhibit platform for collective storytelling & community archives built for communities with heirlooms, stories or other artifacts to save for historical purposes."
+
+# These credits show up in the includes/_footer.html
+# Main author of the website.
+author: "Kalani Craig"
+authorname : "Kalani Craig"
+sitelogo: site_logo.jpg
+
+# What year did you start up this community project?
+sitedate : 2022
+
+# Other community social media. Leave blank if you don't have these.
+email : "kalani [at] kalanicraig.com"
+website : "https://www.kalanicraig.com/"
+twitter : kalanicraig
+github : kalanicraig
+facebook : 
+instagram : kalanicraig
+
+# If you need to know how many people visit your site, go to https://analytics.google.com/
+# When you finish the setup assistant, it will give you a Measurement ID: G-ABCDEFGHIJ
+google_g4_analytics_id: G-LVREG1Y1DT
+
+##############################################
+# FONTS AND COLORS
+#---------------------
+
+# Choose the FONTS you'd like to use.
+# You can see these font choices in action at https://digitalarcplatform.kalanicraig.com/docs/
+# Uncomment the line for the font you like. Comment out all of the other lines.
+
+#fontchoice: archivonarrow # A narrow sans-serif font for headlines and body text
+#fontchoice: baloo # A clean sans-serif font with a playful rounded sans-serif accent
+#fontchoice: quattrocento # A modern sans-serif font with classic serif accents
+#fontchoice: raleway # An elegant sans-serif font with bold sans-serif accents
+#fontchoice: roboto # A clean sans-serif font with simple serif accents
+#fontchoice: slab # A funky slab font with clean sans-serif accents
+fontchoice: source # A modern serif font with clean sans-serif accents
+
+# Choose the COLORS you'd like to use.
+# You can see these color choices in action at https://digitalarcplatform.kalanicraig.com/docs/
+# Uncomment the line for the color you like. Comment out all of the other lines.
+
+#colorchoice: dusk # Dusky purple and olive green
+#colorchoice: lavenderred # Purple-grey with orange-red
+#colorchoice: leafgreen # Leafy green and medium brown
+#colorchoice: marigold # Near-black with marigold yellow
+#colorchoice: navy # Navy with bright teal and grey
+#colorchoice: red # Black, crimson and grey
+colorchoice: tan # Tan and deep brown with flame-bright orange
+#colorchoice: teal # Bright teal with bright orange-yellow accents
+
+##############################################
+# ORGANIZING YOUR COLLECTION
+#---------------------
+# These collections take the basic files you put together for each item in your collection and auto-group and display them.
+# This takes each item in your archive collection and displays it
+collections:
+  items:
+    output: true
+    permalink: /:collection/:path:output_ext
+    contributor: true
+    creator: true
+    group: true
+# If your collection items need to be grouped by person, family or some other group, uncomment this collection
+#  groups:
+#    output: true
+#    permalink: /:collection/:path:output_ext
+#    name: true
+#    folder: true
+#    sort_by: folder
+# If you have oral histories that go with groups, uncomment this collection:
+#  oralhistories:
+#    output: true
+#    permalink: /:collection/:path:output_ext
+#    name: true
+#    folder: true
+#    sort_by: folder
+  authors:
+    output: false
+    name: true
+
+##############################################
+# WEBSITE ORGANIZATION
+#---------------------
+# MOST OF THESE THINGS DON'T NEED TO BE CHANGED.
+##############################################
+
+
+# This URL is the main address for absolute links. This will usually be blank.
+url: 
+# This will usually be blank. If this archive will be in a folder (kalanicraig.com/digitalarcplatform/) instead of in its own main site (idahatiu.github.io) add that folder name here with a slash / in front of it (e.g. /communityarchive).
+baseurl: 
+
+# This URL points directly to the images directory. It needs a slash at the end.
+#
+# Example: <img src="{{ site.url }}{{ site.baseurl }}{{ site.urlimg }}{{ post.image.title }}" />
+# Markdown-Example for posts ![Image Text]({{ site.url }}{{ site.baseurl }}{{ site.urlimg }}image.jpg)
+#
+urlimg: '/assets/img/'
+urlitemimg: '/assets/items/'
+permalink: /:categories/:year/:month/:day/:title:output_ext
+
+markdown : kramdown
+syntax_highlighter: rouge
+
+exclude :
+    - Gemfile
+    - Gemfile.lock
+    - CNAME
+    - LICENSE
+    - README.md
+    - pages/PagesOld
+    - INSTALL.md
+    - screenshot.png
+include: ['_pages']
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag

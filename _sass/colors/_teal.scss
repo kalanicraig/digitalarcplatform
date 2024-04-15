@@ -1,0 +1,41 @@
+/** == ORANGE AND TAN Color Palette
+<palette>
+  <color name="Outer Space Crayola" hex="092d34" r="9" g="45" b="52" />
+  <color name="Orange Peel" hex="ffa62b" r="255" g="166" b="43" />
+  <color name="Cultured" hex="f7f4f3" r="247" g="244" b="243" />
+  <color name="Middle Blue" hex="82c0cc" r="130" g="192" b="204" />
+  <color name="Teal Blue" hex="347383" r="52" g="115" b="131" />
+</palette>
+
+<!-- Coolors Palette Widget -->
+      <script src="https://coolors.co/palette-widget/widget.js"></script>
+      <script data-id="036597300461979865">new CoolorsPaletteWidget("036597300461979865", ["092d34","ffa62b","f7f4f3","82c0cc","347383"]); </script>
+**/
+
+/* SCSS HEX */
+$outer-space-crayola: #092d34;
+$orange-peel: #ffa62b;
+$cultured: #f7f4f3;
+$middle-blue: #82c0cc;
+$teal-blue: #347383;
+
+/** main color scheme **/
+$main-text-color: $outer-space-crayola;
+$main-bg: $cultured;
+$main-link: $orange-peel;
+$main-link-hover: $teal-blue;
+$main-headers: $orange-peel;
+
+/** dark-background color scheme **/
+$dark-text-color: $cultured;
+$dark-bg: $outer-space-crayola;
+$dark-link: $middle-blue;
+$dark-link-hover: $orange-peel;
+$dark-headers: $middle-blue;
+
+/** accent-background color scheme **/
+$accent-text-color: $outer-space-crayola;
+$accent-bg: $middle-blue;
+$accent-link: $teal-blue;
+$accent-link-hover: $orange-peel;
+$accent-headers: $teal-blue;

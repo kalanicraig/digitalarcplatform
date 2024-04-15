@@ -1,0 +1,41 @@
+/** == MARIGOLD AND GREY Color Palette
+<palette>
+  <color name="Black Coffee" hex="37323e" r="55" g="50" b="62" />
+  <color name="Gamboge" hex="de9e36" r="222" g="158" b="54" />
+  <color name="Cultured" hex="eceaec" r="236" g="234" b="236" />
+  <color name="Gold Metallic" hex="deb841" r="222" g="184" b="65" />
+  <color name="Old Lavender" hex="6d6a75" r="109" g="106" b="117" />
+</palette>
+
+<!-- Coolors Palette Widget -->
+      <script src="https://coolors.co/palette-widget/widget.js"></script>
+      <script data-id="07366380829562946">new CoolorsPaletteWidget("07366380829562946", ["37323e","de9e36","eceaec","deb841","6d6a75"]); </script>
+**/
+
+/* SCSS HEX */
+$black-coffee: #37323e;
+$gamboge: #de9e36;
+$cultured: #eceaec;
+$gold-metallic: #deb841;
+$old-lavender: #6d6a75;
+
+/** main color scheme **/
+$main-text-color: $black-coffee;
+$main-bg: $cultured;
+$main-link: $gamboge;
+$main-link-hover: $old-lavender;
+$main-headers: $gamboge;
+
+/** dark-background color scheme **/
+$dark-text-color: $cultured;
+$dark-bg: $black-coffee;
+$dark-link: $gold-metallic;
+$dark-link-hover: $gamboge;
+$dark-headers: $gold-metallic;
+
+/** accent-background color scheme **/
+$accent-text-color: $black-coffee;
+$accent-bg: $gold-metallic;
+$accent-link: $old-lavender;
+$accent-link-hover: $gamboge;
+$accent-headers: $old-lavender;

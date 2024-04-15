@@ -1,0 +1,40 @@
+---
+layout: page
+format: group
+---
+
+{% if page.folder == undefined %}
+{% else %}
+	{% assign oralhistory = site.oralhistories | where: "folder", page.folder  | first %}
+{% endif %}
+
+
+{% if oralhistory.excerpt == undefined %}
+{% else %}
+<div class="row">
+<div class="col-s-12 col-md-8">
+{% endif %}
+  
+<div class="row listrecent"> 
+{% for item in site.items %}
+{% if item.itemdescendant == page.folder %}
+{% include itembox.html %}
+{% endif %}
+{% endfor %}
+</div>    
+
+{% if oralhistory.excerpt == undefined %}
+{% else %}
+</div>
+<DIV class="col-s-6 col-md-4" markdown=1>
+
+<h4>An interview with {{ page.title }}</h4>
+
+<p>{{ oralhistory.excerpt | markdownify}}
+
+<a href="{{ oralhistory.url }}" class="btn follow">Read more of this interview</a>
+
+</DIV>
+</div>
+{% endif %}
+
