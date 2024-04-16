@@ -23,9 +23,7 @@ format: item
 
 
 {% if page.embedurl %}
-<div class="responsive-embed">
-  <iframe width="420" height="315" src="{{ page.embedurl }}" frameborder="0" allowfullscreen></iframe>
-</div>
+EMBED
 {% elsif ItemPhotoResult %}
 <img class="article-image float-right thumbnail" src="{{ ItemPhotoResult }}" alt="{{ page.title }}""/>{% endif %}
 
