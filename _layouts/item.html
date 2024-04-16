@@ -64,7 +64,7 @@ format: item
     	{% assign dc-base = "dublin-core-" %}
     	{% capture dc-type %}{{ dc-base }}{{ field[0] }}{% endcapture %}
     	<tr>
-        	<td><div id="{{ dc-type }}" class="element">{% if site.data.metadata.displayvalues.field %} {{ site.data.metadata.displayvalues.title }} {% else %} {{ field[0] }} {% endif %}</div></td>
+        	<td><div id="{{ dc-type }}" class="element">{% if site.data.metadata.displayvalues.field %} {{ site.data.metadata.displayvalues.field }} {% else %} {{ field[0] }} {% endif %}</div></td>
         	<td><div class="element-text">{{ page.field }}</div></td>
     	</tr>
 	{% endfor %}
