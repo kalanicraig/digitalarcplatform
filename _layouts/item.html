@@ -61,6 +61,7 @@ format: item
 <p class="quiet">Dublin Core</p>
 <table class="stack">
 	{% for field in site.data.metadata.fields %}
+	{{ var[0] }}
     	{% assign dc-base = "dublin-core-" %}
     	{% capture dc-type %}{{ dc-base }}{{ field[0] }}{% endcapture %}
     	<tr>
