@@ -1,3 +1,61 @@
+<!-- DEV NOTES:
+This multi-filtering system currently uses the 'type' and 'category' fields.
+See lines 85-90ish for changing the 'and' 'or' logic of the filters
+Chance which property is accessed & used in the filters in lines 13-18 & 20-25. -->
+
+<!-- DEFINE CATLIST -->
+{% assign allCats = "" | split: ',' %}
+{% assign allFormats = "" | split: ',' %}
+
+<!--BEGIN ITEM ASSIGNMENT LOOP-->
 {% for item in site.items %}
-{% include _itembox.html %}
+
+<!-- BUILDING CATEGORY LIST-->
+{% if item.categories %}
+{% for cat in item.categories %}
+{% assign allCats = allCats | push: cat %}
 {% endfor %}
+{% endif %}
+
+<!-- BUILDING TYPE LIST-->
+{% if item.format %}
+{% for format in item.format %}
+{% assign allFormats = allFormats | push: format %}
+{% endfor %}
+{% endif %}
+
+{% endfor %}
+<!-- END ITEM ASSIGNMENT LOOP-->
+
+<!-- MAKE filter lists UNIQUE -->
+{% assign uniqueCategories = allCats | uniq %}
+{% assign uniqueFormats = allFormats | uniq %}
+
+<div class="grid-container" style="margin-bottom:.5rem;">
+	<div class="grid-x grid-padding-x grid-margin-x">
+		<div class="cell {% if uniqueFormats.size > 1 %}large-8{% endif %} buttons-container">
+			{% for category in uniqueCategories %}
+			<button class="filter-button" data-category="{{ category }}">{{ category }}</button>
+			{% endfor %}
+		</div>
+	{% if uniqueFormats.size > 1 %}
+	   <!-- Checkbox List (Right) -->
+		<div class="cell large-4" id="filter-checkboxes">
+			{% for format in uniqueFormats %}
+			<div class="checkbox-wrapper">
+				<input type="checkbox" data-format="{{ format }}" id="checkbox-{{ forloop.index }}" />
+				<label for="checkbox-{{ forloop.index }}">{{ format }}</label>
+			</div>
+			{% endfor %}
+		</div>
+	{% endif %}
+	</div>
+</div>
+
+<div class="grid-container">
+	<div class="grid-x grid-padding-x grid-margin-x">
+    {% for item in site.items %}
+    {% include _itembox.html %}
+    {% endfor %}
+	</div>
+</div>
