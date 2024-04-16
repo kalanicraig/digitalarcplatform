@@ -382,6 +382,19 @@ Typographic & Design Elements
 		color: $dark-text-color;
 	}
 
+.item-quote {
+  font-weight: 400;
+  letter-spacing: 1.25px;
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 1.25em;
+  color: $main-text-color;
+  float: right;
+  margin: 10px 0 0 20px;
+  border-left: 1px solid $main-link-hover;
+  padding-left: 10px;
+}
+
 .pull-quote {
   font-weight: 400;
   letter-spacing: 1.25px;
