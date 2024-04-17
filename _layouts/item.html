@@ -9,8 +9,7 @@ format: item
 	<div class="grid-x grid-padding-x">
 <div class="cell small-12 medium-6 large-4 card">
 	<div class="card-thumbnail float-left">
-		{% if page.embedurl %}
-		
+
 {% if page.embedurl %}
 	{% if page.embedurl contains "youtu.be" %}
 		{% assign embedsplit = page.embedurl | split: "?" %}
@@ -39,6 +38,7 @@ format: item
 			{% endif %}
 		{% endfor %}
 	{% endif %}
+
 {% if ItemPhotoResult.size > 0 %}
 		<img class="square thumbnail" src="{{ ItemPhotoResult }}" alt="{{ page.title }}">
 {% endif %}
