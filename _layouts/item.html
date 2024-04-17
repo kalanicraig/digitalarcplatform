@@ -4,46 +4,96 @@ format: item
 ---
 {% capture FileName %}{{ page.url | split: '/' | last }}{% endcapture %}
 {% capture ItemID %}{{ FileName | split: '.' | first }}{% endcapture %}
+
+<div class="grid-container">
+	<div class="grid-x grid-padding-x">
+<div class="cell small-12 medium-6 large-4 card">
+	<div class="card-thumbnail float-left">
+
+{% if page.embedurl %}
+	{% if page.embedurl contains "youtu.be" %}
+		{% assign embedsplit = page.embedurl | split: "?" %}
+		{% assign embedarray = embedsplit[0] | split: "/" %}
+		{% assign embedcode = embedarray[3] %}
+	{% elsif page.embedurl contains "youtube.com" %}
+		{% assign embedarray = page.embedurl | split: "=" %}
+		{% assign embedcode = embedarray[1] %}
+	{% endif %}
+	{% if embedcode.size > 0 %}
+	<div class="responsive-embed">
+	  <iframe width="350" height="350" src="https://www.youtube.com/embed/{{ embedcode }}" frameborder="0" allowfullscreen></iframe>
+	</div>
+	{% endif %}
+{% else %}
+	{% if item.photo %}
+		{% assign ItemPhotoResult = item.photo %}
+	{% else %}
+		{% capture ItemImagePath %}{{ urlitemimg }}{{ ItemID }}{% endcapture %}
+		{% for static_file in site.static_files %}
+			{% if static_file.path contains ItemImagePath %}
+				{% unless static_file.path contains ".md" %}
+					{% capture ItemPhotoResult %}{{site.baseurl}}{{static_file.path}}{% endcapture %}
+					{% endunless %}
+				{% break %}
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+
+{% if ItemPhotoResult.size > 0 %}
+		<img class="square thumbnail" src="{{ ItemPhotoResult }}" alt="{{ page.title }}">
+{% endif %}
+
+{% capture ItemTranscript %}{{ ItemID }}_Transcript{% endcapture %}
+{% for static_file in site.static_files %}
+	{% if static_file.path contains ItemTranscript %}
+		{% capture ItemTranscriptResult %}{{site.baseurl}}{{static_file.path}}{% endcapture %}
+	{% endif %}
+{% endfor %}
+{% endif %}
+
+{% capture ItemOralHistory %}{{ ItemID }}.mp3{% endcapture %}
+{% for static_file in site.static_files %}
+	{% if static_file.path contains ItemOralHistory %}
+		{% capture ItemOralHistoryResult %}{{site.baseurl}}{{static_file.path}}{% endcapture %}
+	{% endif %}
+{% endfor %}
+
+{% if ItemOralHistoryResult %}
+<figure>
+  <figcaption>Listen to the story</figcaption>
+  <audio controls src="{{ItemOralHistoryResult}}
+"></audio>
+  <p><a href="{{ItemOralHistoryResult}}"> Download audio</a>{% if ItemTranscriptResult %} | 
+<a href="{{ItemTranscriptResult}}">Download transcript</a>
+{% endif %}
+
+</figure>
+{% endif %}
+</div>
+</div>
+<div class="cell medium-6 large-8">
+
+{% if page.contributor.size > 0 %}<h2>Object contributed by {{ page.contributor }}</h2>{% endif %}
+
+{% if page.contributorquote.size > 0  %}<q class="item-quote">"{{ page.contributorquote }}"</q>{% endif %}
+
+{% if page.creator.size > 0  %}<h4>Originally created by {{ page.creator }}</h4>{% endif %}
+
+{% if page.externalurl.size > 0  %}<p>Find out more at {{ page.externalurl }}{% endif %}
+
+{% if page.teammember.size > 0  %}<p>Assistance collecting this object by {{ page.teammember }}</p>{% endif %}
+
+</div>
+</div>
+</div>
+</div>
 <div class="grid-container">
 	<div class="grid-x grid-padding-x">
 		<div class="large-12 cell">
 			<!--page-->
-
-{% if item.photo %}
-	{% assign ItemPhotoResult = item.photo %}
-{% else %}
-	{% capture ItemImagePath %}{{ urlitemimg }}{{ ItemID }}{% endcapture %}
-	{% for static_file in site.static_files %}
-		{% if static_file.path contains ItemImagePath %}
-			{% capture ItemPhotoResult %}{{site.baseurl}}{{static_file.path}}{% endcapture %}
-			{% break %}
-		{% endif %}
-	{% endfor %}
-{% endif %}
-
-
-{% if page.embedurl %}
-<div class="responsive-embed">
-  <iframe width="420" height="315" src="{{ page.embedurl }}" frameborder="0" allowfullscreen></iframe>
-</div>
-{% elsif ItemPhotoResult %}
-<img class="article-image float-right thumbnail" src="{{ ItemPhotoResult }}" alt="{{ page.title }}""/>{% endif %}
-
-{% if page.contributor %}<h2>Object contributed by {{ page.contributor }}</h2>{% endif %}
-
-{% if page.contributorquote %}<q class="pull-quote">"{{ page.contributorquote }}"</q>{% endif %}
-
-{% if page.creator %}<h4>Originally created by {{ page.creator }}</h4>{% endif %}
-
-{% if page.externalurl %}<p>Find out more at {{ page.externalurl }}{% endif %}
-
-{% if page.embedurl %}<p>EMBED ME {{ page.embedurl }}{% endif %}
-
-{% if page.format == "media" %}<p>{{ page.embedurl }}{% endif %}
-
-{% if page.teammember %}<p>Assistance collecting this object by {{ page.teammember }}</p>{% endif %}
-
 {{ content }}
+
+
 
 {% capture ItemImagePath %}{{ urlitemimg }}{{ ItemID }}{% endcapture %}
 {% for static_file in site.static_files %}
