@@ -4,10 +4,13 @@
 			<div class="large-12 cell">
 				<div class="footer-actions">
 				  <div class="footer-actions-left">
-				   {%if site.twitter %}<a href="https://twitter.com/{{ site.twitter }}"><i class="fa fa-twitter-square" aria-hidden="true"></i> {{ site.twitter }}</a>{%endif%}
+				   {%if site.twitter.size > 0 %}<a href="https://twitter.com/{{ site.twitter }}"><i class="fa-brands fa-square-x-twitter"></i></a>{%endif%}
+				   {%if site.instagram.size > 0 %}<a href="https://instagram.com/{{ site.instagram }}"><i class="fa-brands fa-instagram"></i></a>{%endif%}
+				   {%if site.facebook.size > 0 %}<a href="https://facebook.com/{{ site.facebook }}"><i class="fa-brands fa-facebook"></i></a>{%endif%}
 				  </div>
 				  <div class="footer-actions-right">
-					<a href="https://github.com/{{ site.github }}/"><i class="fa fa-github" aria-hidden="true"></i> {{ site.github }}</a>
+					{%if site.github.size > 0 %}<a href="https://github.com/{{ site.github }}/"><i class="fa fa-github" aria-hidden="true"></i></a>{%endif%}
+					{%if site.website.size > 0 %}<a href="https://{{site.website}}"><i class="fa-solid fa-globe"></i></i></a>{%endif%}
 				  </div>
 				</div>
 

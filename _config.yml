@@ -101,8 +101,7 @@ colorchoice: tan # Tan and deep brown with flame-bright orange
 ##############################################
 # ORGANIZING YOUR COLLECTION
 #---------------------
-# These collections take the basic files you put together for each item in your collection and auto-group and display them.
-# This takes each item in your archive collection and displays it
+# These collections take the basic files you put together for each item in your collection and display them with filtering buttons based on the tags, formats, and categories you include in each item file.
 collections:
   items:
     output: true
@@ -110,20 +109,6 @@ collections:
     contributor: true
     creator: true
     group: true
-# If your collection items need to be grouped by person, family or some other group, uncomment this collection
-#  groups:
-#    output: true
-#    permalink: /:collection/:path:output_ext
-#    name: true
-#    folder: true
-#    sort_by: folder
-# If you have oral histories that go with groups, uncomment this collection:
-#  oralhistories:
-#    output: true
-#    permalink: /:collection/:path:output_ext
-#    name: true
-#    folder: true
-#    sort_by: folder
   authors:
     output: false
     name: true
