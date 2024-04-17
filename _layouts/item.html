@@ -5,44 +5,44 @@ format: item
 {% capture FileName %}{{ page.url | split: '/' | last }}{% endcapture %}
 {% capture ItemID %}{{ FileName | split: '.' | first }}{% endcapture %}
 
-
-{% if item.photo %}
-	{% assign ItemPhotoResult = item.photo %}
-{% else %}
-	{% capture ItemImagePath %}{{ urlitemimg }}{{ ItemID }}{% endcapture %}
-	{% for static_file in site.static_files %}
-		{% if static_file.path contains ItemImagePath %}
-			{% unless static_file.path contains ".md" %}
-				{% capture ItemPhotoResult %}{{site.baseurl}}{{static_file.path}}{% endcapture %}
-				{% endunless %}
-			{% break %}
-		{% endif %}
-	{% endfor %}
-{% endif %}
-
 <div class="grid-container">
 	<div class="grid-x grid-padding-x">
 <div class="cell small-12 medium-6 large-4 card">
 	<div class="card-thumbnail float-left">
-		{% if page.embedurl %}
-		
-{% if page.embedurl contains "youtu.be" %}
-{% assign embedsplit = page.embedurl | split: "?" %}
-{% assign embedarray = embedsplit[0] | split: "/" %}
-{% assign embedcode = embedarray[3] %}
 
-{% elsif page.embedurl contains "youtube.com" %}
-{% assign embedarray = page.embedurl | split: "=" %}
-{% assign embedcode = embedarray[1] %}
+{% if page.embedurl %}
+	{% if page.embedurl contains "youtu.be" %}
+		{% assign embedsplit = page.embedurl | split: "?" %}
+		{% assign embedarray = embedsplit[0] | split: "/" %}
+		{% assign embedcode = embedarray[3] %}
+	{% elsif page.embedurl contains "youtube.com" %}
+		{% assign embedarray = page.embedurl | split: "=" %}
+		{% assign embedcode = embedarray[1] %}
+	{% endif %}
+	{% if embedcode.size > 0 %}
+	<div class="responsive-embed">
+	  <iframe width="350" height="350" src="https://www.youtube.com/embed/{{ embedcode }}" frameborder="0" allowfullscreen></iframe>
+	</div>
+	{% endif %}
+{% else %}
+	{% if item.photo %}
+		{% assign ItemPhotoResult = item.photo %}
+	{% else %}
+		{% capture ItemImagePath %}{{ urlitemimg }}{{ ItemID }}{% endcapture %}
+		{% for static_file in site.static_files %}
+			{% if static_file.path contains ItemImagePath %}
+				{% unless static_file.path contains ".md" %}
+					{% capture ItemPhotoResult %}{{site.baseurl}}{{static_file.path}}{% endcapture %}
+					{% endunless %}
+				{% break %}
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+
+{% if ItemPhotoResult.size > 0 %}
+		<img class="square thumbnail" src="{{ ItemPhotoResult }}" alt="{{ page.title }}">
 {% endif %}
 
-{% if embedcode %}
-<div class="responsive-embed">
-  <iframe width="350" height="350" src="https://www.youtube.com/embed/{{ embedcode }}" frameborder="0" allowfullscreen></iframe>
-</div>
-{% elsif ItemPhotoResult %}
-<img class="square thumbnail" src="{{ ItemPhotoResult }}" alt="{{ page.title }}">
-{% endif %}
 {% capture ItemTranscript %}{{ ItemID }}_Transcript{% endcapture %}
 {% for static_file in site.static_files %}
 	{% if static_file.path contains ItemTranscript %}
