@@ -8,15 +8,15 @@ fields:
     creator_1:
     creator_2:
   contributor:
-  creationdate:
+  creation_date:
   type:
-  shortdesc:
+  short_desc:
   group:
   categories: [  ]
   tags: [  ]
-  teammember:
-  contributorquote:
-  imagelist:
+  team_member:
+  contributor_quote:
+  image_list:
     alttext_1:
     alttext_2:
 # daterange:
