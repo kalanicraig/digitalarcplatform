@@ -1,4 +1,4 @@
-# Input a string for each variable under displayvalues if you would like to change how that value is labeled when displayed.
+# Input or alter the string after each field to change how that item is displayed in metadata tables on each item page.
 # You can create your own metadata attributes by following the model below. Note that any new groups will require modification of the html layout for items in order to display correctly.
 fields: 
   title: "Title"
@@ -7,8 +7,8 @@ fields:
   creationdate: "Date"
   type: "Type"
   shortdesc: "Short Description"
-  group:
-  categories: [  ]
-  tags: [  ]
+  group: "Group"
+  categories: "Categories"
+  tags: "Tags"
   teammember: "Team Member"
   contributorquote: "Contributor Quote"

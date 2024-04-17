@@ -112,14 +112,18 @@ format: item
 <p class="quiet">Dublin Core</p>
 <table class="stack">
     {% for var in page %}
-        {% if page.var.size > 0 %}
-			{% assign varname = var[0] %}
-			{% for key in site.data.metadata %}
+		{% if page[var] != "" and page[var] %}
+			{% assign varname = var %}
+			{% for key in site.data.metadata.fields %}
 				{% assign keyname = key[0] %}
-				{% if keyname == varname %}
+				{% if keyname == varname and key[1] %}
 					{% capture dc-type %} {{ dc-base }}{{keyname}} {% endcapture %}
 					{% assign keyvalue = key[1] %}
-					{% assign varvalue = var[1] %}
+					{% if page[var].first %}
+					{% assign varvalue = page[var] | join: ", " %}
+					{% else %}
+					{% assign varvalue = page[var] %}
+					{% endif %}
 						<tr>
 							<td><div id="{{ dc-type }}" class="element">{{ keyvalue }}</div></td>
 							<td><div class="element-text">{{ varvalue }}</div></td>
