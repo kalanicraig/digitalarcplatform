@@ -111,27 +111,23 @@ format: item
 <h2 id="Dublin Core">More about this item</h2>
 <p class="quiet">Dublin Core</p>
 <table class="stack">
-    {% for var in site.data.metadata.fields offset:2 %}
-        {% if var[0] contains "_" %}
-            {% capture varname %}{{ var[0] }}{% endcapture %}
-            {% assign separated-type = varname | split: " " %}
-            {% capture capitalized-type %}
-                {% for word in separated-type %}
-                    {{ word | capitalize }}
-                {% endfor %}
-            {% endcapture %}
-                <tr>
-                    <td><div id="{{ dc-type }}" class="element">{% if site.data.metadata.displayvalues.var %} {{ site.data.metadata.displayvalues.var }} {% else %} {{ capitalized-type }} {% endif %}</div></td>
-                    <td><div class="element-text">{{ page.var[1] }}</div></td>
-                </tr>
-        {% else %}
-            {% assign capitalized-type = var[0] | capitalize %}
-                <tr>
-                    <td><div id="{{ dc-type }}" class ="element">{% if site.data.metadata.displavalues.var %} {{ site.data.metadata.displayvalues.var }} {% else %} {{ capitalized-type }} {% endif %}</div></td>
-                    <td><div class="element-text">{{ page.var[1] }}</div></td>
-                </tr>
-        {% endif %}
-    {% endfor %}
+    {% for var in page %}
+        {% if page.var.size > 0 %}
+			{% assign varname = var[0] %}
+			{% for key in site.data.metadata %}
+				{% assign keyname = key[0] %}
+				{% if keyname == varname %}
+					{% capture dc-type %} {{ dc-base }}{{keyname}} {% endcapture %}
+					{% assign keyvalue = key[1] %}
+					{% assign varvalue = var[1] %}
+						<tr>
+							<td><div id="{{ dc-type }}" class="element">{{ keyvalue }}</div></td>
+							<td><div class="element-text">{{ varvalue }}</div></td>
+						</tr>
+				{% endif %}
+			{% endfor %}
+		{% endif %}
+	{% endfor %}		
 </table>
 
 <!-- {: .my-class } -->  

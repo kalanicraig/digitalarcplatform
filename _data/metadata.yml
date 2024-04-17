@@ -1,54 +1,14 @@
 # Input a string for each variable under displayvalues if you would like to change how that value is labeled when displayed.
 # You can create your own metadata attributes by following the model below. Note that any new groups will require modification of the html layout for items in order to display correctly.
 fields: 
-  layout:
-  format:
-  title:
-  creator:
-    creator_1:
-    creator_2:
-  contributor:
-  creation_date:
-  type:
-  short_desc:
+  title: "Title"
+  creator: "Creator"
+  contributor: "Contributor"
+  creationdate: "Date"
+  type: "Type"
+  shortdesc: "Short Description"
   group:
   categories: [  ]
   tags: [  ]
-  team_member:
-  contributor_quote:
-  image_list:
-    alttext_1:
-    alttext_2:
-# daterange:
-#   datestart:
-#   dateend:
-# author:
-# externalurl:
-# embedurl:
-# license: 
-displayvalues: 
-  layout:
-  format:
-  title: "Name"
-  creator:
-    creator_1:
-    creator_2:
-  contributor:
-  creationdate:
-  type:
-  shortdesc:
-  group:
-  categories:
-  tags:
-  teammember:
-  contributorquote:
-  imagelist:
-    alttext_1:
-    alttext_2: 
-# daterange:
-#   datestart:
-#   dateend:
-# author:
-# externalurl:
-# embedurl:
-# license:
+  teammember: "Team Member"
+  contributorquote: "Contributor Quote"
