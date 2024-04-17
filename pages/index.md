@@ -2,8 +2,6 @@
 title: Community-Archive Jekyll Theme
 layout: homepage
 permalink: /
-pullquote: "You're 5 steps from a community archive!"
-quoteattribution: ""
 ---
 
 ### About the DigitalArc Jekyll Theme
