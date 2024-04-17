@@ -114,8 +114,7 @@ format: item
     {% for var in site.data.metadata.fields offset:2 %}
         {% if var[0] contains "_" %}
             {% capture varname %}{{ var[0] }}{% endcapture %}
-            {% capture replaced-type %}{{ varname | replace: "_", " " }}{% endcapture %}
-            {% assign separated-type = replaced-type | split: " " %}
+            {% assign separated-type = varname | split: " " %}
             {% capture capitalized-type %}
                 {% for word in separated-type %}
                     {{ word | capitalize }}
