@@ -111,7 +111,7 @@ format: item
 <h2 id="Dublin Core">More about this item</h2>
 <p class="quiet">Dublin Core</p>
 <table class="stack">
-    {% for var in theme.root.data.metadata.fields offset:2 %}
+    {% for var in site.data.metadata.fields offset:2 %}
         {% if var[0] contains "_" %}
             {% capture varname %}{{ var[0] }}{% endcapture %}
             {% assign separated-type = varname | split: " " %}
