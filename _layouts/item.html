@@ -111,27 +111,24 @@ format: item
 <h2 id="Dublin Core">More about this item</h2>
 <p class="quiet">Dublin Core</p>
 <table class="stack">
-    {% for var in page %}
-		{% if page[var] != "" and page[var] %}
-			{% assign varname = var %}
-			{% for key in site.data.metadata.fields %}
-				{% assign keyname = key[0] %}
-				{% if keyname == varname and key[1] %}
-					{% capture dc-type %} {{ dc-base }}{{keyname}} {% endcapture %}
-					{% assign keyvalue = key[1] %}
-					{% if page[var].first %}
-					{% assign varvalue = page[var] | join: ", " %}
-					{% else %}
+	{% for var in page %}
+	{% if page[var] != "" and page[var] %}
+		{% for key in site.data.metadata.fields %}
+			{% if key[0] == var and key[1] %}
+				{% capture dc-type %} {{ dc-base }}{{ key[0] }} {% endcapture %}
+				{% if page[var].first %}
+					{% assign varvalue = page[var] | uniq | join: ", " %}
+				{% else %}
 					{% assign varvalue = page[var] %}
-					{% endif %}
-						<tr>
-							<td><div id="{{ dc-type }}" class="element">{{ keyvalue }}</div></td>
-							<td><div class="element-text">{{ varvalue }}</div></td>
-						</tr>
 				{% endif %}
-			{% endfor %}
-		{% endif %}
-	{% endfor %}		
+				<tr>
+					<td><div id="{{ dc-type }}" class="element">{{ key[1] }}</div></td>
+					<td><div class="element-text">{{ varvalue }}</div></td>
+				</tr>
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+{% endfor %}		
 </table>
 
 <!-- {: .my-class } -->  
