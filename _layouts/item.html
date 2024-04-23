@@ -98,13 +98,19 @@ format: item
 {% capture ItemImagePath %}{{ urlitemimg }}{{ ItemID }}{% endcapture %}
 {% for static_file in site.static_files %}
 {% if static_file.path contains ItemImagePath %}
-{% unless static_file.path contains '_th' %}
+{% unless static_file.path contains 'transcript' %}
 {% capture ItemPhotoResult %}{{site.baseurl}}{{static_file.path}}{% endcapture %}
 <img class="featured-image img-fluid" src="{{ ItemPhotoResult }}" alt="{{ page.title }}">
 {% endunless %}
 {% endif %}
 {% endfor %}
 
+{% capture ItemTranscriptMD %}{{ ItemID }}.md{% endcapture %}
+{% for static_file in site.static_files %}
+	{% if static_file.path contains ItemTranscriptMD %}
+		include {{site.baseurl}}{{static_file.path}}
+	{% endif %}
+{% endfor %}
 
 {% assign dc-base = "dublin-core-" %}
 <div class="element-set">
