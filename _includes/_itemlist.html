@@ -1,7 +1,6 @@
 <!-- DEV NOTES:
-This multi-filtering system currently uses the 'type' and 'category' fields.
-See lines 85-90ish for changing the 'and' 'or' logic of the filters
-Chance which property is accessed & used in the filters in lines 13-18 & 20-25. -->
+This multi-filtering system currently uses the 'format' field for the type of object and the 'categories' field to make content-based tag filtering possible.
+Change which property is accessed & used in the filters in lines 14-25 & 28-39. -->
 
 <!-- DEFINE CATLIST -->
 {% assign allCats = "" | split: ',' %}
@@ -13,14 +12,28 @@ Chance which property is accessed & used in the filters in lines 13-18 & 20-25. 
 <!-- BUILDING CATEGORY LIST-->
 {% if item.categories %}
 {% for cat in item.categories %}
-{% assign allCats = allCats | push: cat %}
+<!-- CHECK FOR STRING OR NUMBER TO ASSIST IN CAPTURING UNIQUE VALUES-->
+{% capture testValue %}{{ cat | json }}{% endcapture %}
+{% if testValue contains '"' %}
+{% assign catvar = cat %}
+{% else %}
+{% capture catvar %}{{ cat }}{% endcapture %}
+{% endif %}
+{% assign allCats = allCats | push: catvar %}
 {% endfor %}
 {% endif %}
 
 <!-- BUILDING TYPE LIST-->
 {% if item.format %}
 {% for format in item.format %}
-{% assign allFormats = allFormats | push: format %}
+<!-- CHECK FOR STRING OR NUMBER TO ASSIST IN CAPTURING UNIQUE VALUES-->
+{% capture testValue %}{{ format | json }}{% endcapture %}
+{% if testValue contains '"' %}
+{% assign formatvar = format %}
+{% else %}
+{% capture formatvar %}{{ format }}{% endcapture %}
+{% endif %}
+{% assign allFormats = allFormats | push: formatvar %}
 {% endfor %}
 {% endif %}
 
@@ -29,7 +42,10 @@ Chance which property is accessed & used in the filters in lines 13-18 & 20-25. 
 
 <!-- MAKE filter lists UNIQUE -->
 {% assign uniqueCategories = allCats | uniq %}
+{% assign uniqueCategories = uniqueCategories | sort %}
+
 {% assign uniqueFormats = allFormats | uniq %}
+{% assign uniqueFormats = uniqueFormats | sort %}
 
 <div class="grid-container" style="margin-bottom:.5rem;">
 	<div class="grid-x grid-padding-x grid-margin-x">
