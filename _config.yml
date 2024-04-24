@@ -66,6 +66,18 @@ github : kalanicraig
 facebook : 
 instagram : kalanicraig
 
+##############################################
+# COPYRIGHT PAGE
+#---------------------
+# If your collection is part of a larger site, remove the "#" before the copyright_page placeholder and paste in your about-us or contact link.
+# EXAMPLE: copyright_page: "https://yoursite.com/aboutus"
+# Otherwise, make sure you update the copyright.md file in the "pages" folder
+# copyright_page: 
+
+# If you need to know how many people visit your site, go to https://analytics.google.com/
+# When you finish the setup assistant, it will give you a Measurement ID: G-ABCDEFGHIJ
+google_g4_analytics_id: 
+
 # If you need to know how many people visit your site, go to https://analytics.google.com/
 # When you finish the setup assistant, it will give you a Measurement ID: G-ABCDEFGHIJ
 google_g4_analytics_id: G-LVREG1Y1DT
