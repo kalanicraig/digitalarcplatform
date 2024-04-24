@@ -1,5 +1,5 @@
 ---
-title: Community-Archive Jekyll Theme
+title: DigitalArc Jekyll Theme
 layout: homepage
 permalink: /
 ---
