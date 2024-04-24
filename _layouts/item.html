@@ -100,7 +100,7 @@ format: item
 {% if static_file.path contains ItemImagePath %}
 {% unless static_file.path contains 'transcript' %}
 {% capture ItemPhotoResult %}{{site.baseurl}}{{static_file.path}}{% endcapture %}
-<img class="featured-image img-fluid" src="{{ ItemPhotoResult }}" alt="{{ page.title }}">
+<img class="featured-image img-fluid object-photo" src="{{ ItemPhotoResult }}" alt="{{ page.title }}">
 {% endunless %}
 {% endif %}
 {% endfor %}
