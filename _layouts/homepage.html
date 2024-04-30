@@ -14,7 +14,7 @@ format: homepage
 <div class="grid-x grid-padding-x align-middle">
 <div class="cell medium-8 align-right small-order-2 medium-order-1 large-order-1 align-middle" markdown="1" >
 
-{% if page.pullquote != empty %}<span class="pull-quote"><p>{{page.pullquote}}</p>{% if page.quoteattribution != empty %}<p class="quiet">--{{page.quoteattribution}}</p>{%endif%}</span>{%endif%}
+{% if page.pullquote.size > 10 %}<span class="pull-quote"><p>{{page.pullquote}}</p>{% if page.quoteattribution != empty %}<p class="quiet">--{{page.quoteattribution}}</p>{%endif%}</span>{%endif%}
 
 {{ content }}
 

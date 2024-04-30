@@ -53,6 +53,7 @@ description: "DigitalArc is an exhibit platform for collective storytelling & co
 author: "Kalani Craig"
 authorname : "Kalani Craig"
 sitelogo: site_logo.jpg
+placeholderimg: placeholder.png
 
 # What year did you start up this community project?
 sitedate : 2022
@@ -64,6 +65,18 @@ twitter : kalanicraig
 github : kalanicraig
 facebook : 
 instagram : kalanicraig
+
+##############################################
+# COPYRIGHT PAGE
+#---------------------
+# If your collection is part of a larger site, remove the "#" before the copyright_page placeholder and paste in your about-us or contact link.
+# EXAMPLE: copyright_page: "https://yoursite.com/aboutus"
+# Otherwise, make sure you update the copyright.md file in the "pages" folder
+# copyright_page: 
+
+# If you need to know how many people visit your site, go to https://analytics.google.com/
+# When you finish the setup assistant, it will give you a Measurement ID: G-ABCDEFGHIJ
+google_g4_analytics_id: 
 
 # If you need to know how many people visit your site, go to https://analytics.google.com/
 # When you finish the setup assistant, it will give you a Measurement ID: G-ABCDEFGHIJ
@@ -101,8 +114,7 @@ colorchoice: tan # Tan and deep brown with flame-bright orange
 ##############################################
 # ORGANIZING YOUR COLLECTION
 #---------------------
-# These collections take the basic files you put together for each item in your collection and auto-group and display them.
-# This takes each item in your archive collection and displays it
+# These collections take the basic files you put together for each item in your collection and display them with filtering buttons based on the tags, formats, and categories you include in each item file.
 collections:
   items:
     output: true
@@ -110,20 +122,6 @@ collections:
     contributor: true
     creator: true
     group: true
-# If your collection items need to be grouped by person, family or some other group, uncomment this collection
-#  groups:
-#    output: true
-#    permalink: /:collection/:path:output_ext
-#    name: true
-#    folder: true
-#    sort_by: folder
-# If you have oral histories that go with groups, uncomment this collection:
-#  oralhistories:
-#    output: true
-#    permalink: /:collection/:path:output_ext
-#    name: true
-#    folder: true
-#    sort_by: folder
   authors:
     output: false
     name: true
