@@ -4,14 +4,14 @@
 			<div class="large-12 cell">
 				<div class="footer-actions">
 				  <div class="footer-actions-left">
-				   {%if site.twitter.size > 0 %}<a href="https://twitter.com/{{ site.twitter }}"><i class="fa-brands fa-x-twitter" target="_blank" aria-label="Twitter"></i></a>{%endif%}
-				   {%if site.instagram.size > 0 %}<a href="https://instagram.com/{{ site.instagram }}"><i class="fa-brands fa-instagram" target="_blank" aria-label="Instagram"></i></a>{%endif%}
-				   {%if site.facebook.size > 0 %}<a href="https://facebook.com/{{ site.facebook }}"><i class="fa-brands fa-facebook" target="_blank" aria-label="Facebook"></i></a>{%endif%}
+				   {%if site.twitter.size > 0 %}<a href="https://twitter.com/{{ site.twitter }}" aria-label="Our Twitter"><i class="fa-brands fa-x-twitter" target="_blank"></i></a>{%endif%}
+				   {%if site.instagram.size > 0 %}<a href="https://instagram.com/{{ site.instagram }}" aria-label="Our Instagram"><i class="fa-brands fa-instagram" target="_blank"></i></a>{%endif%}
+				   {%if site.facebook.size > 0 %}<a href="https://facebook.com/{{ site.facebook }}" aria-label="Our Facebook"><i class="fa-brands fa-facebook" target="_blank"></i></a>{%endif%}
 				  </div>
 				  <div class="footer-actions-right">
-					{%if site.github.size > 0 %}<a href="https://github.com/{{ site.github }}/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>{%endif%}
-					{%if site.website.size > 0 %}<a href="{{site.website}}" target="_blank"><i class="fa-solid fa-globe"></i></i></a>{%endif%}
-					{%if site.email.size > 0 %}<a href="mailto:{{ site.email | encode_email }}"><i class="fa fa-envelope" aria-hidden="true"></i></a>{%endif%}
+					{%if site.github.size > 0 %}<a href="https://github.com/{{ site.github }}/" target="_blank" aria-label="Our Github"><i class="fa fa-github"></i></a>{%endif%}
+					{%if site.website.size > 0 %}<a href="{{site.website}}" target="_blank" aria-label="Our Website"><i class="fa-solid fa-globe"></i></i></a>{%endif%}
+					{%if site.email.size > 0 %}<a href="mailto:{{ site.email | encode_email }}" aria-label="Email Us"><i class="fa fa-envelope"></i></a>{%endif%}
 				  </div>
 				</div>
 
