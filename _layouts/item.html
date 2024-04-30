@@ -40,7 +40,7 @@ format: item
 	{% endif %}
 
 {% if ItemPhotoResult.size > 0 %}
-		<img class="square thumbnail" src="{{ ItemPhotoResult }}" alt="{{ page.title }}">
+		<img class="square thumbnail" src="{{ ItemPhotoResult }}" alt="{{ page.shortdesc }}">
 {% endif %}
 
 {% capture ItemTranscript %}{{ ItemID }}_Transcript{% endcapture %}
