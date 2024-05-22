@@ -46,7 +46,7 @@ Base settings
 		color: $dark-link-hover;
 	}
 
-	.accentbg{
+	.accentbg {
 	  background-color: $accent-bg;
 	  color: $accent-text-color;
 	}
@@ -64,10 +64,14 @@ Base settings
 	}
 	
 /** == Header styling **/
-
-	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	
+	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .author {
 		font-family: $headline-font;
 		color: $main-headers;
+	}
+
+	.darkbg h1, .darkbg .h1, .darkbg h2, .darkbg .h2, .darkbg h3, .darkbg .h3, .darkbg h4, .darkbg .h4, .darkbg h5, .darkbg .h5, .darkbg h6, .darkbg .h6 {
+		color: $dark-headers;
 	}
 
 	h1, .h1 {
@@ -79,22 +83,18 @@ Base settings
 		padding: 0 3px 0 3px;
 		display:inline-block;
 	}
-
+	
 	.serif {
 		font-family: $headline-font;
 	}
 
-	.sans, .subheadline {
+	.sans {
 		font-family: $body-font;
 		color: $main-headers;
 	}
 
-	.subheadline:after,.subheadline:before {
-		border-bottom: $accent-link-hover;
-	}
-
 	.subheadline.siteheader {
-		color: $main-link;
+		color: $dark-text-color;
 		padding-bottom: .5em;
 	}
 
@@ -156,7 +156,19 @@ Base settings
 	.subheadline:after,.subheadline:before {
 		content: " ";
 		display: block;
-		border-bottom: 1px solid $dark-headers;
+		border-bottom: 1px solid $main-link-hover;
+	}
+
+	.accentbg .subheadline:after, .accentbg .subheadline:before {
+		border-bottom: $accent-link-hover;
+	}
+
+	.darkbg .subheadline:after,.darkbg .subheadline:before {
+		border-bottom: $dark-link-hover;
+	}
+	
+	.darkbg .sitetitle:after,.darkbg .sitetitle:before {
+		border-bottom: $dark-link;
 	}
 	
 	.CV {
@@ -808,6 +820,7 @@ Footer
 	  font-size: 1.125rem;
 	  font-weight: 700;
 	  margin-bottom: 0;
+	  color: $accent-text-color;
 	}
 
 	.footer-author .bio {

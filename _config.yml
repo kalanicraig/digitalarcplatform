@@ -94,9 +94,9 @@ google_g4_analytics_id: G-LVREG1Y1DT
 #fontchoice: baloo # A clean sans-serif font with a playful rounded sans-serif accent
 #fontchoice: quattrocento # A modern sans-serif font with classic serif accents
 #fontchoice: raleway # An elegant sans-serif font with bold sans-serif accents
-#fontchoice: roboto # A clean sans-serif font with simple serif accents
+fontchoice: roboto # A clean sans-serif font with simple serif accents
 #fontchoice: slab # A funky slab font with clean sans-serif accents
-fontchoice: source # A modern serif font with clean sans-serif accents
+#fontchoice: source # A modern serif font with clean sans-serif accents
 
 # Choose the COLORS you'd like to use.
 # You can see these color choices in action at https://digitalarcplatform.kalanicraig.com/docs/
@@ -108,8 +108,9 @@ fontchoice: source # A modern serif font with clean sans-serif accents
 #colorchoice: marigold # Near-black with marigold yellow
 #colorchoice: navy # Navy with bright teal and grey
 #colorchoice: red # Black, crimson and grey
-colorchoice: tan # Tan and deep brown with flame-bright orange
+#colorchoice: tan # Tan and deep brown with flame-bright orange
 #colorchoice: teal # Bright teal with bright orange-yellow accents
+colorchoice: custom
 
 ##############################################
 # ORGANIZING YOUR COLLECTION

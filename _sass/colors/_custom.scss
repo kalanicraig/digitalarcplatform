@@ -1,0 +1,40 @@
+/** == ORANGE AND TAN Color Palette
+/* CSS HEX */
+/**
+--midnight-green: #004042ff;
+--moonstone: #5eb1bfff;
+--white: #ffffffff;
+--orange-crayola: #ef7a43ff;
+--cinnabar: #d94f30ff;
+
+<!-- Coolors Palette Widget -->
+      <script src="https://coolors.co/palette-widget/widget.js"></script>
+      <script data-id="08317492185861521">new CoolorsPaletteWidget("08317492185861521", ["004042","5eb1bf","eef9fc","ffffff","ef7a43","d94f30"]); </script>
+**/
+
+/* SCSS HEX */
+$midnight-green: #004042;
+$moonstone: #5eb1bf;
+$white: #ffffff;
+$cinnabar: #d94f30;
+
+/** main color scheme **/
+$main-text-color: $midnight-green;
+$main-bg: lighten( $moonstone, 43% );
+$main-link: $cinnabar;
+$main-link-hover: lighten( $cinnabar, 25% );
+$main-headers: $cinnabar;
+
+/** Color scheme for top header bar **/
+$dark-text-color: $midnight-green;
+$dark-bg: lighten( $moonstone, 30% );
+$dark-link: darken( $cinnabar, 10% );
+$dark-link-hover: $midnight-green;
+$dark-headers: darken( $cinnabar, 15% );
+
+/** Color scheme for bottom bar **/
+$accent-text-color: lighten( $moonstone, 43% );
+$accent-bg: $midnight-green;
+$accent-link: lighten( $cinnabar, 25% );
+$accent-link-hover: $white;
+$accent-headers: lighten( $cinnabar, 25% );

@@ -10,17 +10,12 @@
   excerpt:
   image:
 
-- title: Blog
-  url: /blog
+- title: Resources
+  url: /resources
   excerpt:
   image:
   
-- title: Theme Docs
-  url: /docs
-  excerpt:
-  image:
-  
-- title: Example Collection
-  url: https://idahatiu.github.io
+- title: Example Site
+  url: https://digitalarcplatform.github.io/demo
   excerpt:
   image:
