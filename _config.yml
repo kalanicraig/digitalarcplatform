@@ -76,10 +76,6 @@ instagram : kalanicraig
 
 # If you need to know how many people visit your site, go to https://analytics.google.com/
 # When you finish the setup assistant, it will give you a Measurement ID: G-ABCDEFGHIJ
-google_g4_analytics_id: 
-
-# If you need to know how many people visit your site, go to https://analytics.google.com/
-# When you finish the setup assistant, it will give you a Measurement ID: G-ABCDEFGHIJ
 google_g4_analytics_id: G-LVREG1Y1DT
 
 ##############################################

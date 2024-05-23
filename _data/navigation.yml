@@ -5,16 +5,16 @@
   excerpt:
   image:
 
-- title: Quick Start Guide
-  url: /quickstart
+- title: DigitalArc Toolkit
+  url: https://digitalarcplatform.github.io/
   excerpt:
   image:
 
-- title: Resources
-  url: /resources
+- title: Quick Start Guide
+  url: https://digitalarcplatform.github.io/documentation/quickstart/
   excerpt:
   image:
-  
+
 - title: Example Site
   url: https://digitalarcplatform.github.io/demo
   excerpt:
