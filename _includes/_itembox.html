@@ -37,6 +37,13 @@
 {% capture ItemPhotoResult %}{{site.baseurl}}{{ site.urlimg }}{{site.placeholderimg}}{% endcapture %}
 {% endif %}
 
+{% capture BaseInfo %}{{site.baseurl}}{{ site.urlimg }}{% endcapture %}
+
+{% if ItemPhotoResult = BaseInfo %}
+{% capture ItemPhotoResult %}{{site.baseurl}}{{ site.urlimg }}{{site.placeholderimg}}{% endcapture %}
+{% endif %}
+
+
 	<div data-categories="{{ item.categories | join: ',' }}" data-formats="{{ item.format | join: ',' }}" class="cell filter-item small-12 medium-6 large-4 card filter-simple-item {% if item.group%}{{item.group}} {% endif %}{% if uniquetags%}{{ uniquetags | join: " " }}{% endif %}">
 	{% if ItemPhotoResult != empty %}
 	<div class="card-thumbnail">
