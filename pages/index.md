@@ -93,7 +93,7 @@ That said, anyone can use the DigitalArc Jekyll Theme and the guides for communi
 </div>
 <div class="cell medium-6 align-top" markdown=1>
 
-![A screenshot of the DigitalArc exhibit collection page]({{site.baseurl}}screenshot.png “screenshot”)
+![A screenshot of the DigitalArc exhibit collection page]({{site.baseurl}}/screenshot.png “screenshot”)
 
 </div>
 </div>
