@@ -84,7 +84,7 @@ This Jekyll theme is made for anyone looking to create a simple online exhibit o
 
 ### Who is it for?
 
-This theme works best for communities who need simple archiving with minimal technical skills and simple workflows. To keep things simple, it doesn't have built-in search or filtering. ***If this sounds like you, and you don't need blogs or other add-ons yet, the best way to start is using the Quick Start guide, above.***
+This theme works best for communities who need simple archiving with minimal technical skills and simple workflows. To keep things simple, it doesn't have built-in search or filtering. ***If this sounds like you, and you don't need blogs or other add-ons yet, the best way to start is using the Quick Start guide in our [documentation](https://digitalarcplatform.github.io/documentation/quickstart/)
 
 If you need something more complex but want to stick with Github Pages because it's free and doesn't require you to find a web host of your own, we recommend either [Minicomp/Wax](https://minicomp.github.io/wax/) (a Github theme with searching, filtering and IIIF metadata to formalize information about your collection) or [CollectionBuilder](https://collectionbuilder.github.io) (a Github theme that uses Google Spreadsheets to incorporate maps and timelines).
 
@@ -93,7 +93,8 @@ That said, anyone can use the DigitalArc Jekyll Theme and the guides for communi
 </div>
 <div class="cell medium-6 align-top" markdown=1>
 
-BIG GIANT IMAGE OF A COLLECTION
+![A screenshot of the DigitalArc exhibit collection page]({{site.baseurl}}screenshot.png “screenshot”)
+
 </div>
 </div>
 </div>
