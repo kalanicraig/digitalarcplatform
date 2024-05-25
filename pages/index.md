@@ -6,18 +6,12 @@ permalink: /
 {% capture timestamp %}January 1, {{site.sitedate}}{% endcapture %}
 {% assign SiteYear = timestamp | date: "%Y" %}
 {% assign NowYear = "now" | date: "%Y" %}
-
 <html class="no-js" lang="en" dir="ltr">
 <head>
 {% include _head.html %}
 </head>
 <body id="the-body">
 
-
-<!--
-==================================================
-Body
-================================================== -->
 
 <div data-sticky-container style="width: 100%" class="accentbg">
 <div data-sticky data-options="marginTop:0;" data-top-anchor="the-body:top" style="width: 100%">
@@ -27,27 +21,17 @@ Body
 <div class="title-bar-title">{{ site.title }}</div>
 </div>
 
-<!--
-==================================================
-Top Bar
-================================================== -->
-<div class="top-bar accentbg" id="example-menu" style="width: 100%; background-color: #004042">
+<div class="top-bar accentbg" id="example-menu" style="width: 100%;; background-color: #004042;">
 <ul class="vertical medium-horizontal dropdown menu menu-hover-lines" data-responsive-menu="accordion medium-dropdown">
-<!--
-==================================================
-Home Link for Mobile
-================================================== -->
-<li class="accentbg home-nav-small">
+
+<li class="accent home-nav-small">
 <a href="{{ site.baseurl }}/">
 Home
 </a>
 </li>
-<!--
-==================================================
-Nav Loop
-================================================== -->
+
 {% for nav in site.data.navigation %}
-<li class="accentbg {% if page.url == nav.url %}active{% endif %}">
+<li class="accentbg{% if page.url == nav.url %} active{% endif %}">
 {% if nav.url contains "http" %}<a href="{{ nav.url }}" target="_blank">{% else %}<a href="{{ site.baseurl }}{{ nav.url }}">{% endif %}
 {{ nav.title }}<!--{{ page.url }} == {{ nav.url }}-->
 
@@ -141,3 +125,10 @@ The [IDAH@IU team](https://idah.indiana.edu) often gets requests to support arch
 </div>
 </div>
 </div>
+<script src="{{ site.baseurl }}/assets/js/vendor/jquery.js"></script>
+<script src="{{ site.baseurl }}/assets/js/vendor/what-input.js"></script>
+<script src="{{ site.baseurl }}/assets/js/vendor/foundation.js"></script>
+<script src="{{ site.baseurl }}/assets/js/app.js"></script>
+</body>
+</html>
+
