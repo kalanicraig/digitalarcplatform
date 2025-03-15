@@ -20,9 +20,9 @@ format: item
 		{% assign embedcode = embedarray[1] %}
 	{% endif %}
 	{% if embedcode.size > 0 %}
-	<div class="responsive-embed">
+	<video controls class="responsive-embed">
 	  <iframe width="350" height="350" src="https://www.youtube.com/embed/{{ embedcode }}" frameborder="0" allowfullscreen></iframe>
-	</div>
+	</video>
 	{% endif %}
 {% else %}
 	{% if item.photo %}
@@ -59,12 +59,11 @@ format: item
 {% endfor %}
 
 {% if ItemOralHistoryResult %}
-<figure>
+<figure role="figure" aria-label="Interview Audio Player">
   <figcaption>Listen to the story</figcaption>
-  <audio controls src="{{ItemOralHistoryResult}}
-"></audio>
-  <p><a href="{{ItemOralHistoryResult}}"> Download audio</a>{% if ItemTranscriptResult %} | 
-<a href="{{ItemTranscriptResult}}">Download transcript</a>
+  <audio controls src="{{ItemOralHistoryResult}}"></audio>
+  <p><a href="{{ItemOralHistoryResult}}" role="link" aria-label="Item Interview Audio Download"> Download audio</a>{% if ItemTranscriptResult %} | 
+<a href="{{ItemTranscriptResult}}" role="link" aria-label="Item Interview Transcript Download">Download transcript</a>
 {% endif %}
 
 </figure>

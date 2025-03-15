@@ -56,11 +56,10 @@ Change which property is accessed & used in the filters in lines 14-25 & 28-39. 
 		</div>
 	{% if uniqueFormats.size > 1 %}
 	   <!-- Checkbox List (Right) -->
-		<div class="cell large-4" id="filter-checkboxes">
+		<div class="cell large-4" id="filter-checkboxes" role="group" aria-label="item format checkboxes">
 			{% for format in uniqueFormats %}
 			<div class="checkbox-wrapper">
-				<input type="checkbox" data-format="{{ format }}" id="checkbox-{{ forloop.index }}" />
-				<label for="checkbox-{{ forloop.index }}">{{ format }}</label>
+				<input type="checkbox" data-format="{{ format }}" id="checkbox-{{ forloop.index }}"><label for="checkbox-{{ forloop.index }}">{{ format }}</label>
 			</div>
 			{% endfor %}
 		</div>
