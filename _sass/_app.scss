@@ -685,8 +685,7 @@ Filter Buttons
     }
 
     .checkbox-wrapper input[type="checkbox"] {
-        display: none;
-        visibility: hidden;
+		opacity: 0;
     }
 
     .checkbox-wrapper label {

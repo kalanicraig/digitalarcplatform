@@ -4,7 +4,7 @@ Body
 ================================================== -->
 
 <div data-sticky-container style="width: 100%">
-  <div data-sticky data-options="marginTop:0;" data-top-anchor="the-body:top" style="width: 100%">
+  <div data-sticky data-options="marginTop:0;" data-top-anchor="the-body:top" style="width: 100%" role="region" aria-label="Header">
 
     <div class="title-bar darkbg" data-responsive-toggle="example-menu" data-hide-for="medium" style="width: 100%">
       <button class="menu-icon" type="button" data-toggle="example-menu"></button>
@@ -15,8 +15,8 @@ Body
 ==================================================
 Top Bar
 ================================================== -->
-    <div class="top-bar darkbg" id="example-menu" style="width: 100%">
-      <ul class="vertical medium-horizontal dropdown menu menu-hover-lines" data-responsive-menu="accordion medium-dropdown">
+    <nav role="navigation" aria-label="Main" class="top-bar darkbg" id="example-menu" style="width: 100%">
+      <ul role="menubar" aria-label="Pages" class="vertical medium-horizontal dropdown menu menu-hover-lines" data-responsive-menu="accordion medium-dropdown">
 <!--
 ==================================================
 Home Link for Mobile
@@ -31,7 +31,7 @@ Home Link for Mobile
 Nav Loop
 ================================================== -->
 {% for nav in site.data.navigation %}
-			<li class="darkbg{% if page.url == nav.url %} active{% endif %}">
+			<li role="menuitem" class="darkbg{% if page.url == nav.url %} active{% endif %}">
 				{% if nav.url contains "http" %}<a href="{{ nav.url }}" target="_blank">{% else %}<a href="{{ site.baseurl }}{{ nav.url }}">{% endif %}
 					{{ nav.title }}<!--{{ page.url }} == {{ nav.url }}-->
 
@@ -39,7 +39,7 @@ Nav Loop
 			</li>
 {% endfor %}
       </ul>
-    </div>
+    </nav>
 
   </div>
 </div>
