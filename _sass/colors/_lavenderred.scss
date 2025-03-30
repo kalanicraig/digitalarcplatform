@@ -1,4 +1,4 @@
-/** == LAVENDER AND RED Color Palette
+/** == LAVENDER AND ORANGE-RED Color Palette
 <palette>
   <color name="Gunmetal" hex="2b303a" r="43" g="48" b="58" />
   <color name="Cinnabar" hex="d64933" r="214" g="73" b="51" />
@@ -12,16 +12,19 @@
       <script data-id="05987572020110035">new CoolorsPaletteWidget("05987572020110035", ["2b303a","d64933","eee5e9","92dce5","7c7c7c"]); </script>
 **/
 
+$dark-top-bar: true;
+
 /* SCSS HEX */
 $gunmetal: #2b303a;
 $cinnabar: #d64933;
 $lavender-blush: #eee5e9;
 $middle-blue: #92dce5;
 $gray-web: #7c7c7c;
+$white: #ffffff;
 
 /** main color scheme **/
 $main-text-color: $gunmetal;
-$main-bg: $lavender-blush;
+$main-bg: $white;
 $main-link: $cinnabar;
 $main-link-hover: $gray-web;
 $main-headers: $cinnabar;
@@ -30,12 +33,12 @@ $main-headers: $cinnabar;
 $dark-text-color: $lavender-blush;
 $dark-bg: $gunmetal;
 $dark-link: $middle-blue;
-$dark-link-hover: $cinnabar;
+$dark-link-hover: lighten($cinnabar, 15%);
 $dark-headers: $middle-blue;
 
 /** accent-background color scheme **/
 $accent-text-color: $gunmetal;
-$accent-bg: $middle-blue;
-$accent-link: $gray-web;
-$accent-link-hover: $cinnabar;
-$accent-headers: $gray-web;
+$accent-bg: $lavender-blush;
+$accent-link: darken($cinnabar, 5%);
+$accent-link-hover: darken($gray-web, 12%);
+$accent-headers: darken($gray-web, 12%);

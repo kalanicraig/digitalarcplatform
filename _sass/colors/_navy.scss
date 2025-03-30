@@ -11,6 +11,10 @@
       <script src="https://coolors.co/palette-widget/widget.js"></script>
       <script data-id="05875225772800331">new CoolorsPaletteWidget("05875225772800331", ["353535","549da0","ffffff","d9d9d9","294e66"]); </script>
 
+**/
+
+$dark-top-bar: true;
+
 /* SCSS HEX */
 
 $jet: #353535;
@@ -28,14 +32,14 @@ $main-headers: $cadet-blue;
 
 /** dark-background color scheme **/
 $dark-text-color: $white;
-$dark-bg: $indigo-dye;
+$dark-bg: darken($indigo-dye,5%);
 $dark-link: $gainsboro;
-$dark-link-hover: $cadet-blue;
+$dark-link-hover: lighten($cadet-blue, 15%);
 $dark-headers: $gainsboro;
 
 /** accent-background color scheme **/
 $accent-text-color: $jet;
 $accent-bg: $gainsboro;
 $accent-link: $indigo-dye;
-$accent-link-hover: $cadet-blue;
+$accent-link-hover: lighten($indigo-dye, 15%);
 $accent-headers: $indigo-dye;

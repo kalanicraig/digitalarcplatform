@@ -12,17 +12,20 @@
       <script data-id="02255110307697208">new CoolorsPaletteWidget("02255110307697208", ["483b32","abbf73","faf8f0","dde5b6","836249"]); </script>
 **/
 
+$dark-top-bar: true;
+
 /* SCSS HEX */
 $dark-lava: #483b32;
 $middle-green-yellow: #abbf73;
 $floral-white: #faf8f0;
 $pale-spring-bud: #dde5b6;
 $coyote-brown: #836249;
+$white: #ffffff;
 
 /** main color scheme **/
 $main-text-color: $dark-lava;
-$main-bg: $floral-white;
-$main-link: $middle-green-yellow;
+$main-bg: $white;
+$main-link: darken($middle-green-yellow, 25%);
 $main-link-hover: $coyote-brown;
 $main-headers: $middle-green-yellow;
 
@@ -37,5 +40,5 @@ $dark-headers: $pale-spring-bud;
 $accent-text-color: $dark-lava;
 $accent-bg: $pale-spring-bud;
 $accent-link: $coyote-brown;
-$accent-link-hover: $middle-green-yellow;
+$accent-link-hover: darken($middle-green-yellow,25%);
 $accent-headers: $coyote-brown;

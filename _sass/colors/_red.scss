@@ -1,4 +1,4 @@
-/** == ORANGE AND TAN Color Palette
+/** == DARK RED Color Palette
 <palette>
   <color name="Dark Red" hex="990000" r="153" g="0" b="0" />
   <color name="Spanish Grey" hex="8e8e8e" r="1" g="66" b="106" />
@@ -12,30 +12,33 @@
       <script data-id="09046957977818991">new CoolorsPaletteWidget("09046957977818991", ["990000","8e8e8e","ffffff","edebeb","191919"]); </script>
 **/
 
+$dark-top-bar: true;
+
 /* SCSS HEX */
 $dark-red: #990000;
 $spanish-grey: #8e8e8e;
 $white: #ffffff;
 $platinum: #edebeb;
 $eerie-black: #191919;
+$white: #ffffff;
 
 /** main color scheme **/
 $main-text-color: $eerie-black;
 $main-bg: $white;
-$main-link: $spanish-grey;
-$main-link-hover: $dark-red;
-$main-headers: $spanish-grey;
+$main-link: $dark-red;
+$main-link-hover: darken($spanish-grey, 15%);
+$main-headers: darken($spanish-grey, 15%);
 
 /** dark-background color scheme **/
 $dark-text-color: $white;
 $dark-bg: $dark-red;
 $dark-link: $platinum;
-$dark-link-hover: $spanish-grey;
-$dark-headers: $platinum;
+$dark-link-hover: lighten($spanish-grey, 10%);
+$dark-headers: lighten($platinum, 15%);
 
 /** accent-background color scheme **/
 $accent-text-color: $dark-red;
 $accent-bg: $platinum;
 $accent-link: $eerie-black;
-$accent-link-hover: $spanish-grey;
+$accent-link-hover: $dark-red;
 $accent-headers: $eerie-black;

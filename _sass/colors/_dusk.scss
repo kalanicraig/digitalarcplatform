@@ -1,4 +1,4 @@
-/** == ORANGE AND TAN Color Palette
+/** == DUSKY Color Palette
 <palette>
   <color name="Pine Tree" hex="313628" r="49" g="54" b="40" />
   <color name="Laurel Green" hex="a6ae98" r="166" g="174" b="152" />
@@ -11,30 +11,33 @@
       <script data-id="03768526682767458">new CoolorsPaletteWidget("03768526682767458", ["313628","a6ae98","f7faf0","979187","544f53"]); </script>
 **/
 
+$dark-top-bar: true;
+
 /* SCSS HEX */
 $pine-tree: #313628;
 $laurel-green: #a6ae98;
 $ivory: #f7faf0;
 $middle-grey: #979187;
 $dark-liver: #544f53;
+$white: #ffffff;
 
 /** main color scheme **/
 $main-text-color: $dark-liver;
-$main-bg: $ivory;
-$main-link: $laurel-green;
+$main-bg: $white;
+$main-link: darken($laurel-green, 20%);
 $main-link-hover: $dark-liver;
 $main-headers: $laurel-green;
 
 /** dark-background color scheme **/
 $dark-text-color: $ivory;
 $dark-bg: $dark-liver;
-$dark-link: $middle-grey;
+$dark-link: lighten($middle-grey, 15%);
 $dark-link-hover: $laurel-green;
 $dark-headers: $middle-grey;
 
 /** accent-background color scheme **/
 $accent-text-color: $pine-tree;
-$accent-bg: $middle-grey;
-$accent-link: $dark-liver;
-$accent-link-hover: $laurel-green;
-$accent-headers: $dark-liver;
+$accent-bg: lighten($middle-grey,15%);
+$accent-link: darken($dark-liver, 5%);
+$accent-link-hover: darken($laurel-green, 20%);
+$accent-headers: darken($dark-liver, 15%);
