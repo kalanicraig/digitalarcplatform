@@ -187,9 +187,51 @@ Nav and Menu Elements
 	.top-bar, .top-bar ul {
 		font-family: $body-font;
 		text-transform: uppercase;
-		background-color: $dark-bg;
 	}
 
+	@mixin nav-bar-colors($dark-top-bar) {
+	  @if $dark-top-bar == true {
+		background-color: $dark-bg;
+		color: $dark-text-color;
+	  } @else {
+		background-color: $main-bg;
+		color: $main-text-color;
+	  }
+	}
+	
+	@mixin nav-bar-link($dark-top-bar) {
+	  @if $dark-top-bar == true {
+		color: $dark-link;
+	  } @else {
+		color: $main-link;
+	  }
+	}
+	
+	@mixin nav-bar-hover($dark-top-bar) {
+	  @if $dark-top-bar == true {
+		color: $dark-link-hover;
+	  } @else {
+		color: $main-link-hover;
+	  }
+	}
+		
+	.pagetitle, .top-bar, .top-bar ul,  .top-bar ul {
+	  @include nav-bar-colors($dark-top-bar)
+	}
+	
+	.pagetitle h1, .pagetitle .h1 {
+		text-transform: none;
+	  	@include nav-bar-colors($dark-top-bar)
+	}
+
+	.top-bar a {
+	  @include nav-bar-link($dark-top-bar)
+	}
+	
+	.top-bar li a:hover, .top-bar li a:focus {
+	  @include nav-bar-hover($dark-top-bar)
+	}
+	
 	@media screen and (min-width: 40em) {
 		.top-bar {
 			-webkit-flexbox-pack: center;
@@ -259,6 +301,7 @@ Nav and Menu Elements
 
 	.menu-hover-lines li.active > a {
 	  background-color: transparent;
+	  @include nav-bar-hover($dark-top-bar)
 	}
 
 	.menu-hover-lines a:before {
@@ -465,7 +508,7 @@ ItemBox
 }
 
 .card-desc {
-  color: $accent-text-color;
+  color: $main-text-color;
   display: block;
   font-family: $body-font;
   font-size: 0.85rem;
@@ -670,12 +713,12 @@ Filter Buttons
     }
 
     .filter-button:hover {
-		border-color: $main-link;
+		border-color: $main-link-hover;
     }
 
     .filter-button.active {
-        background-color: $main-link;
-        color: $main-bg;
+        background-color: $dark-link;
+        color: $dark-text-color;
     }
 
 /* Checkbox style */
@@ -685,7 +728,8 @@ Filter Buttons
     }
 
     .checkbox-wrapper input[type="checkbox"] {
-		opacity: 0;
+        display: none;
+        visibility: hidden;
     }
 
     .checkbox-wrapper label {
@@ -808,10 +852,20 @@ Footer
 			  flex: 1 0 0;
 	}
 
+	@mixin footer-avatar($dark-top-bar) {
+	  @if $dark-top-bar == true {
+		border-radius: 50%;
+	  }
+	}
+		
 	.footer-author .avatar {
-	  border-radius: 50%;
+	  @include footer-avatar($dark-top-bar)
+	}
+	
+	.footer-author .avatar {
 	  height: 3.75rem;
 	  width: 3.75rem;
+	  border: 1px $accent-text-color;
 	}
 
 	.footer-author .author {
