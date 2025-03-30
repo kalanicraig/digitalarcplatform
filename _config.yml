@@ -106,7 +106,20 @@ fontchoice: roboto # A clean sans-serif font with simple serif accents
 #colorchoice: red # Black, crimson and grey
 #colorchoice: tan # Tan and deep brown with flame-bright orange
 #colorchoice: teal # Bright teal with bright orange-yellow accents
+#colorchoice: whitewithaccent # White with black text and the accent of your choice from the colors below
 colorchoice: custom
+
+# If you chose white with an accent color, choose the ACCENT you'd like to use.
+# You can see these color choices in action at https://digitalarcplatform.kalanicraig.com/docs/
+# Uncomment the line for the color you like. Comment out all of the other lines.
+
+accentchoice: accent-darkred # Dark red
+#accentchoice: accent-blue # Medium blue
+#accentchoice: accent-green # Kelly green
+#accentchoice: accent-purple # Grape purple
+#accentchoice: accent-pink # Deep pink
+#accentchoice: accent-orange # Tangerine Orange
+#accentchoice: accent-bluegrey # Blue Grey
 
 ##############################################
 # ORGANIZING YOUR COLLECTION

@@ -1,0 +1,28 @@
+/** == WHITE WITH ACCENT Color Palette **/
+
+$dark-top-bar: false;
+
+/* SCSS HEX */
+$black: #000000;
+$white: #ffffff;
+
+/** main color scheme **/
+$main-text-color: $black;
+$main-bg: $white;
+$main-link: darken($accent, 15%);
+$main-link-hover: lighten($accent,15%);
+$main-headers: darken($accent, 25%);
+
+/** dark-background color scheme **/
+$dark-text-color: $white;
+$dark-bg: $black;
+$dark-link: darken($accent, 15%);
+$dark-link-hover: lighten($accent,15%);
+$dark-headers: darken($accent, 25%);
+
+/** accent-background color scheme **/
+$accent-text-color: $black;
+$accent-bg: $white;
+$accent-link: darken($accent, 15%);
+$accent-link-hover: lighten($accent,15%);
+$accent-headers: darken($accent, 25%);
