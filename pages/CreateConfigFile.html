@@ -73,9 +73,9 @@ quoteattribution: ""
      <div class="medium-12 cell">
       	<h3 class="subheadline">Styling Your New Site</h3>
       </div>
-      <div class="medium-6 cell">
+      <div class="medium-4 cell">
 			<label>Font choice
-			  <select id="fontchoice" name="fontchoice input" placeholder="A community name, or your name." aria-describedby="fontchoiceHelpText">
+			  <select id="fontchoice" name="fontchoice input" placeholder="Your choice of font" aria-describedby="fontchoiceHelpText">
 				<option value="archivonarrow">Archivo Narrow (narrow and sleek)</option>
 				<option value="baloo">Baloo (rounded and playful)</option>
 				<option value="quattrocento">Quattrocento (transitional classic)</option>
@@ -85,12 +85,12 @@ quoteattribution: ""
 				<option value="source">Source (modern serif)</option>
 			  </select>
 			</label>
-		  <p class="help-text" id="fontchoiceHelpText">Required. Choose from our preset font options. <a href="/docs/fonts/" target="_blank">View those options here</a></p>
+		  <p class="help-text" id="fontchoiceHelpText">Required. Choose from our preset font options. <a href="https://digitalarcplatform.github.io/documentation/docs/publishSite/basics/typefaceColor/typefaceColor.html" target="_blank">View those options here</a></p>
       </div>
 
-      <div class="medium-6 cell">
+      <div class="medium-4 cell">
 			<label>Color choice
-			  <select id="colorchoice" name="colorchoice input" placeholder="A community name, or your name." aria-describedby="colorchoiceHelpText">
+			  <select id="colorchoice" name="colorchoice input" placeholder="Your choice of color" aria-describedby="colorchoiceHelpText">
 				<option value="dusk">Dusky purple and olive green</option>
 				<option value="lavenderred">Purple-grey with orange-red</option>
 				<option value="marigold">Near-black with marigold yellow</option>
@@ -98,11 +98,29 @@ quoteattribution: ""
 				<option value="red">Black, crimson and grey</option>
 				<option value="tan">Tan and deep brown with flame-bright orange</option>
 				<option value="teal">Bright teal with bright orange-yellow accents</option>
+				<option value="navy">All white with an accent color (choose below)</option>
 			  </select>
 			</label>
-		  <p class="help-text" id="colorchoiceHelpText">Required. Choose from our preset color options. <a href="/docs/colors/" target="_blank">View those options here</a></p>
+		  <p class="help-text" id="colorchoiceHelpText">Required. Choose from our preset color options. <a href="https://digitalarcplatform.github.io/documentation/docs/publishSite/basics/typefaceColor/typefaceColor.html" target="_blank">View those options here</a></p>
 		</div>
-
+      <div class="medium-4 cell">
+			<label>Accent color
+			  <select id="accentcolorchoice" name="accentcolorchoice input" placeholder="Your choice of accent color" aria-describedby="accentcolorchoiceHelpText">
+				<option value="accent-darkred">Dark red</option>
+				<option value="accent-red">Bright red</option>
+				<option value="accent-pink">Deep pink</option>
+				<option value="accent-orange">Tangerine orange</option>
+				<option value="accent-brown">Warm Brown<>/option>
+				<option value="accent-green">Kelly green</option>
+				<option value="accent-navy">Navy blue</option>
+				<option value="accent-blue">Medium blue</option>
+				<option value="accent-bluegrey">Blue grey</option>
+				<option value="accent-purple">Grape purple</option>
+				<option value="accent-Medium grey">Medium grey</option>
+			  </select>
+			</label>
+		  <p class="help-text" id="colorchoiceHelpText">Required. Choose from our preset color options. <a href="https://digitalarcplatform.github.io/documentation/docs/publishSite/basics/typefaceColor/typefaceColor.html" target="_blank">View those options here</a></p>
+		</div>
       <div class="medium-12 cell">
       	<h3 class="subheadline">Linking to Social Media</h3>
       </div>
@@ -266,6 +284,22 @@ fontchoice: SITEFONTCHOICE
 
 colorchoice: SITECOLORCHOICE
 
+# If you chose white with an accent color, choose the ACCENT you'd like to use.
+# You can see these color choices in action at https://digitalarcplatform.kalanicraig.com/docs/
+# Uncomment the line for the color you like. Comment out all of the other lines.
+
+accentchoice: accent-darkred # Dark red
+#accentchoice: accent-red # Bright red
+#accentchoice: accent-pink # Deep pink
+#accentchoice: accent-orange # Tangerine Orange
+#accentchoice: accent-brown # Warm brown
+#accentchoice: accent-green # Kelly green
+#accentchoice: accent-navy # Navy blue
+#accentchoice: accent-blue # Medium blue
+#accentchoice: accent-bluegrey # Blue Grey
+#accentchoice: accent-purple # Grape purple
+#accentchoice: accent-grey # Mid Grey
+
 ##############################################
 # ORGANIZING YOUR COLLECTION
 #---------------------
@@ -348,8 +382,9 @@ plugins:
 	var formEl = document.forms.Config;
 	var formData = new FormData(formEl);
 
-	var find = ["REPONAME", "SITETITLE", "SITESUBTITLE", "SITEDESCRIPTION", "SITEAUTHORSHORT", "SITEAUTHORFULL", "SITEEMAIL", "SITEWEBSITE", "SITETWITTER", "SITEGITHUB", "SITEFACEBOOK", "SITEINSTAGRAM", "SITEGOOGLEANALYTICSG4", "SITEFONTCHOICE", "SITECOLORCHOICE"];
-	var replace = [document.getElementById("site_repo").value, document.getElementById("site_title").value, document.getElementById("site_subtitle").value, document.getElementById("site_desc").value, "SITEAUTHORSHORT", document.getElementById("site_owner").value, document.getElementById("site_email").value, document.getElementById("site_website").value, document.getElementById("site_twitter").value, document.getElementById("site_github").value, document.getElementById("site_facebook").value, document.getElementById("site_instagram").value, document.getElementById("site_googleg4").value, document.getElementById("fontchoice").value, document.getElementById("colorchoice").value];
+	var find = ["REPONAME", "SITETITLE", "SITESUBTITLE", "SITEDESCRIPTION", "SITEAUTHORSHORT", "SITEAUTHORFULL", "SITEEMAIL", "SITEWEBSITE", "SITETWITTER", "SITEGITHUB", "SITEFACEBOOK", "SITEINSTAGRAM", "SITEGOOGLEANALYTICSG4", "SITEFONTCHOICE", "SITECOLORCHOICE", "SITEACCENTCHOICE"];
+	var replace = [document.getElementById("site_repo").value, document.getElementById("site_title").value, document.getElementById("site_subtitle").value, document.getElementById("site_desc").value, "SITEAUTHORSHORT", document.getElementById("site_owner").value, document.getElementById("site_email").value, document.getElementById("site_website").value, document.getElementById("site_twitter").value, document.getElementById("site_github").value, document.getElementById("site_facebook").value, document.getElementById("site_instagram").value, document.getElementById("site_googleg4").value, document.getElementById("fontchoice").value, document.getElementById("colorchoice").value,
+		document.getElementById("accentchoice").value];
 	
 String.prototype.replaceArray = function(find, replace) {
   var replaceString = this;

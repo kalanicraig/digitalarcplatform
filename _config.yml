@@ -114,12 +114,16 @@ colorchoice: custom
 # Uncomment the line for the color you like. Comment out all of the other lines.
 
 accentchoice: accent-darkred # Dark red
-#accentchoice: accent-blue # Medium blue
-#accentchoice: accent-green # Kelly green
-#accentchoice: accent-purple # Grape purple
+#accentchoice: accent-red # Bright red
 #accentchoice: accent-pink # Deep pink
 #accentchoice: accent-orange # Tangerine Orange
+#accentchoice: accent-brown # Warm brown
+#accentchoice: accent-green # Kelly green
+#accentchoice: accent-navy # Navy blue
+#accentchoice: accent-blue # Medium blue
 #accentchoice: accent-bluegrey # Blue Grey
+#accentchoice: accent-purple # Grape purple
+#accentchoice: accent-grey # Mid Grey
 
 ##############################################
 # ORGANIZING YOUR COLLECTION
