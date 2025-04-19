@@ -15,29 +15,29 @@ $dark-top-bar: true;
 
 /* SCSS HEX */
 $pine-tree: #313628;
-$laurel-green: #a6ae98;
-$ivory: #f7faf0;
+$laurel-green: #8B9677;
+$ivory: #FBFCF8;
 $middle-grey: #979187;
 $dark-liver: #544f53;
-$white: #ffffff;
+$white: #FEFFF9;
 
 /** main color scheme **/
 $main-text-color: $dark-liver;
 $main-bg: $white;
-$main-link: darken($laurel-green, 20%);
+$main-link: darken($laurel-green, 15%);
 $main-link-hover: $dark-liver;
-$main-headers: $laurel-green;
+$main-headers: darken($laurel-green, 15%);
 
 /** dark-background color scheme **/
 $dark-text-color: $ivory;
 $dark-bg: $dark-liver;
 $dark-link: lighten($middle-grey, 15%);
-$dark-link-hover: $laurel-green;
+$dark-link-hover: lighten($laurel-green, 15%);
 $dark-headers: $middle-grey;
 
 /** accent-background color scheme **/
 $accent-text-color: $pine-tree;
 $accent-bg: lighten($middle-grey,15%);
-$accent-link: darken($dark-liver, 5%);
+$accent-link: darken($dark-liver, 15%);
 $accent-link-hover: darken($laurel-green, 20%);
 $accent-headers: darken($dark-liver, 15%);
