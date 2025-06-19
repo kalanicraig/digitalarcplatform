@@ -13,167 +13,96 @@ quoteattribution: ""
 
 <p>This form will generate and save a `_config.yml` file for you that you can upload to your new GitHub site.</p>
 
-<form id="Config" onsubmit="return getVals()">
-  <div class="grid-container">
-    <div class="grid-x grid-padding-x">
-      <div class="medium-12 cell">
-      	<h3 class="subheadline">About Your New Site</h3>
-      </div>
-      <div class="medium-6 cell">
+<form id="Config">
+  <label>Site Title *
+    <input type="text" id="site_title" name="site_title" placeholder="Required. A 3-4 word title for your project." aria-required="true">
+  </label><br/>
 
-		  <label>Site Title *
-			<input type="text" id="site_title" name="site_title input" placeholder="Required. A 3-4 word title for your project." aria-required=”true” aria-describedby="site_titleHelpText">
-		  </label>
-		  <p class="help-text" id="site_titleHelpText">Required. A 3-4 word title for your project.</p>
-      </div>
+  <label>Site Subtitle
+    <input type="text" id="site_subtitle" name="site_subtitle" placeholder="Optional subtitle.">
+  </label><br/>
 
-      <div class="medium-6 cell">
-		  <label>Site subtitle
-			<input type="text" id="site_subtitle" name="site_subtitle input" placeholder="Optional. A subtitle that clarifies your project's goals." aria-describedby="site_subtitleHelpText">
-		  </label>
-		  <p class="help-text" id="site_subtitleHelpText">Optional. A subtitle that  your main title more clear.</p>
-      </div>
+  <label>Repository
+    <input type="text" id="site_repo" name="site_repo" placeholder="yourname/yourrepo">
+  </label><br/>
 
-      <div class="medium-6 cell">
-		  <label>Your github repository
-			<input type="text" id="site_repo" name="site_repo input" placeholder="idahatiu/idahatiu.github.io" aria-describedby="site_repoHelpText">
-		  </label>
-		  <p class="help-text" id="site_repoText">Recommended. Your github username, a forward slash (/) and your repository name</p>
-      </div>
+  <label>Site Owner
+    <input type="text" id="site_owner" name="site_owner" placeholder="Author or community name">
+  </label><br/>
 
-      <div class="medium-6 cell">
-		  <label>Site owner
-			<input type="text" id="site_owner" name="site_owner input" placeholder="A community name, or your name." aria-describedby="site_ownerHelpText">
-		  </label>
-		  <p class="help-text" id="site_ownerHelpText">Recommended. A community name, or your name, depending on who the main site author will be</p>
-      </div>
+  <label>Description
+    <textarea id="site_desc" name="site_desc" placeholder="Longer description for search engines"></textarea>
+  </label><br/>
 
-      <div class="medium-12 cell">
-		  <label>Site description
-			<textarea id="site_desc" name="site_desc input" placeholder="A longer description (max 150 words) that helps search engines find your project." placeholder="A longer description (max 150 words) that helps search engines find your project." aria-describedby="site_descHelpText"></textarea>
-		  </label>
-		  <p class="help-text" id="site_descHelpText">Recommended. A longer description (max 150 words) that helps search engines find your project.</p>
-      </div>
+  <label>Start Year
+    <input type="text" id="site_start" name="site_start" placeholder="e.g. 2025">
+  </label><br/>
 
-       <div class="medium-6 cell">
-		  <label>Start Date
-			<input type="text" id="site_start" name="site_owner input" placeholder="A 4-digit year." aria-describedby="site_startHelpText">
-		  </label>
-		  <p class="help-text" id="site_startHelpText">Required. A 4-digit year, so the copyright reflects the date you started your project.</p>
-      </div>
+  <label>Email
+    <input type="text" id="site_email" name="site_email" placeholder="contact@example.com">
+  </label><br/>
 
-       <div class="medium-6 cell">
-		  <label>Site Visitor Tracking
-			<input type="text" id="site_googleg4" name="site_googleg4 input" placeholder="A 4-digit year." aria-describedby="site_googleg4HelpText">
-		  </label>
-		  <p class="help-text" id="site_googleg4HelpText">Optional. A <a href="https://analytics.google.com/" target="_blank">
-		  Google Analytics G4</a> tag will help you see how many people visit your site.</p>
-      </div>
+  <label>Website
+    <input type="text" id="site_website" name="site_website" placeholder="https://yoursite.com">
+  </label><br/>
 
-     <div class="medium-12 cell">
-      	<h3 class="subheadline">Styling Your New Site</h3>
-      </div>
-      <div class="medium-4 cell">
-			<label>Font choice
-			  <select id="fontchoice" name="fontchoice input" placeholder="Your choice of font" aria-describedby="fontchoiceHelpText">
-				<option value="archivonarrow">Archivo Narrow (narrow and sleek)</option>
-				<option value="baloo">Baloo (rounded and playful)</option>
-				<option value="quattrocento">Quattrocento (transitional classic)</option>
-				<option value="raleway">Raleway (elegant but modern)</option>
-				<option value="roboto">Roboto (mid-century modern)</option>
-				<option value="slab">Slab (funky modern)</option>
-				<option value="source">Source (modern serif)</option>
-			  </select>
-			</label>
-		  <p class="help-text" id="fontchoiceHelpText">Required. Choose from our preset font options. <a href="https://digitalarcplatform.github.io/documentation/docs/publishSite/basics/typefaceColor/typefaceColor.html" target="_blank">View those options here</a></p>
-      </div>
+  <label>Twitter
+    <input type="text" id="site_twitter" name="site_twitter" placeholder="@yourhandle">
+  </label><br/>
 
-      <div class="medium-4 cell">
-			<label>Color choice
-			  <select id="colorchoice" name="colorchoice input" placeholder="Your choice of color" aria-describedby="colorchoiceHelpText">
-				<option value="dusk">Dusky purple and olive green</option>
-				<option value="lavenderred">Purple-grey with orange-red</option>
-				<option value="marigold">Near-black with marigold yellow</option>
-				<option value="navy">Navy with bright teal and grey</option>
-				<option value="red">Black, crimson and grey</option>
-				<option value="tan">Tan and deep brown with flame-bright orange</option>
-				<option value="teal">Bright teal with bright orange-yellow accents</option>
-				<option value="navy">All white with an accent color (choose below)</option>
-			  </select>
-			</label>
-		  <p class="help-text" id="colorchoiceHelpText">Required. Choose from our preset color options. <a href="https://digitalarcplatform.github.io/documentation/docs/publishSite/basics/typefaceColor/typefaceColor.html" target="_blank">View those options here</a></p>
-		</div>
-      <div class="medium-4 cell">
-			<label>Accent color
-			  <select id="accentcolorchoice" name="accentcolorchoice input" placeholder="Your choice of accent color" aria-describedby="accentcolorchoiceHelpText">
-				<option value="accent-darkred">Dark red</option>
-				<option value="accent-red">Bright red</option>
-				<option value="accent-pink">Deep pink</option>
-				<option value="accent-orange">Tangerine orange</option>
-				<option value="accent-brown">Warm Brown<>/option>
-				<option value="accent-green">Kelly green</option>
-				<option value="accent-navy">Navy blue</option>
-				<option value="accent-blue">Medium blue</option>
-				<option value="accent-bluegrey">Blue grey</option>
-				<option value="accent-purple">Grape purple</option>
-				<option value="accent-Medium grey">Medium grey</option>
-			  </select>
-			</label>
-		  <p class="help-text" id="colorchoiceHelpText">Required. Choose from our preset color options. <a href="https://digitalarcplatform.github.io/documentation/docs/publishSite/basics/typefaceColor/typefaceColor.html" target="_blank">View those options here</a></p>
-		</div>
-      <div class="medium-12 cell">
-      	<h3 class="subheadline">Linking to Social Media</h3>
-      </div>
-      <div class="medium-6 cell">
-		  <label>Twitter
-			<input type="text" id="site_twitter" name="site_twitter input" placeholder="A 4-digit year." aria-describedby="site_twitterHelpText">
-		  </label>
-		  <p class="help-text" id="site_twitterHelpText">Optional. Your Twitter username</p>
-      </div>
+  <label>Github
+    <input type="text" id="site_github" name="site_github" placeholder="yourgithub">
+  </label><br/>
 
-      <div class="medium-6 cell">
-		  <label>Facebook
-			<input type="text" id="site_facebook" name="site_facebook input" placeholder="A 4-digit year." aria-describedby="site_facebookHelpText">
-		  </label>
-		  <p class="help-text" id="site_facebookHelpText">Optional. Your Facebook username</p>
-      </div>
+  <label>Facebook
+    <input type="text" id="site_facebook" name="site_facebook" placeholder="yourfacebook">
+  </label><br/>
 
-      <div class="medium-6 cell">
-		  <label>Instagram
-			<input type="text" id="site_instagram" name="site_instagram input" placeholder="A 4-digit year." aria-describedby="site_instagramHelpText">
-		  </label>
-		  <p class="help-text" id="site_instagramHelpText">Optional. Your Instagram username</p>
-      </div>
+  <label>Instagram
+    <input type="text" id="site_instagram" name="site_instagram" placeholder="yourinstagram">
+  </label><br/>
 
-      <div class="medium-6 cell">
-		  <label>Github
-			<input type="text" id="site_github" name="site_github input" placeholder="A 4-digit year." aria-describedby="site_githubHelpText">
-		  </label>
-		  <p class="help-text" id="site_githubHelpText">Optional. Your Github username</p>
-      </div>
+  <label>Google Analytics G4 ID
+    <input type="text" id="site_googleg4" name="site_googleg4" placeholder="G-XXXXXXXXXX">
+  </label><br/>
 
-      <div class="medium-6 cell">
-		  <label>Email
-			<input type="text" id="site_email" name="site_email input" placeholder="A 4-digit year." aria-describedby="site_emailHelpText">
-		  </label>
-		  <p class="help-text" id="site_emailHelpText">Optional. An email, if you want site visitors to contact you.</p>
-      </div>
+  <label>Font Choice
+    <select id="fontchoice" name="fontchoice">
+      <option value="archivonarrow">Archivo Narrow</option>
+      <option value="baloo">Baloo</option>
+      <option value="quattrocento">Quattrocento</option>
+      <option value="raleway">Raleway</option>
+      <option value="roboto">Roboto</option>
+      <option value="slab">Slab</option>
+      <option value="source">Source</option>
+    </select>
+  </label><br/>
 
-      <div class="medium-6 cell">
-		  <label>Website
-			<input type="text" id="site_website" name="site_website input" placeholder="A 4-digit year." aria-describedby="site_websiteHelpText">
-		  </label>
-		  <p class="help-text" id="site_websiteHelpText">Optional. An external website if you'd like to direct visitors to a second site.</p>
-      </div>
+  <label>Color Choice
+    <select id="colorchoice" name="colorchoice">
+      <option value="dusk">Dusk</option>
+      <option value="lavenderred">Lavender Red</option>
+      <option value="marigold">Marigold</option>
+      <option value="navy">Navy</option>
+      <option value="red">Red</option>
+      <option value="tan">Tan</option>
+      <option value="teal">Teal</option>
+    </select>
+  </label><br/>
 
-    </div>
-  </div>
+  <label>Accent Color
+    <select id="accentcolorchoice" name="accentcolorchoice">
+      <option value="accent-darkred">Dark Red</option>
+      <option value="accent-blue">Blue</option>
+      <option value="accent-pink">Pink</option>
+      <option value="accent-orange">Orange</option>
+    </select>
+  </label><br/>
 
-
-<input class="button round" id="bt" type="button" value="Save Config File" onclick = "startDownload()" />
+  <input type="button" value="Download Config File" onclick="startDownload()" />
 </form>
 
-
+<script>
 var ConfigYMLTemplate = `
 ##############################################
 # START YOUR CONFIGURATION HERE! For more info, visit https://digitalarcplatform.kalanicraig.com/quickstart
@@ -377,40 +306,52 @@ plugins:
   
 `;
 
-  function startDownload() {
-	 // access the text from the input fields
-	var formEl = document.forms.Config;
-	var formData = new FormData(formEl);
-
-	var find = ["REPONAME", "SITETITLE", "SITESUBTITLE", "SITEDESCRIPTION", "SITEAUTHORSHORT", "SITEAUTHORFULL", "SITEEMAIL", "SITEWEBSITE", "SITETWITTER", "SITEGITHUB", "SITEFACEBOOK", "SITEINSTAGRAM", "SITEGOOGLEANALYTICSG4", "SITEFONTCHOICE", "SITECOLORCHOICE", "SITEACCENTCHOICE"];
-	var replace = [document.getElementById("site_repo").value, document.getElementById("site_title").value, document.getElementById("site_subtitle").value, document.getElementById("site_desc").value, "SITEAUTHORSHORT", document.getElementById("site_owner").value, document.getElementById("site_email").value, document.getElementById("site_website").value, document.getElementById("site_twitter").value, document.getElementById("site_github").value, document.getElementById("site_facebook").value, document.getElementById("site_instagram").value, document.getElementById("site_googleg4").value, document.getElementById("fontchoice").value, document.getElementById("colorchoice").value,
-		document.getElementById("accentchoice").value];
-	
 String.prototype.replaceArray = function(find, replace) {
-  var replaceString = this;
-  for (var i = 0; i < find.length; i++) {
-    replaceString = replaceString.replace(find[i], replace[i]);
+  let str = this;
+  for (let i = 0; i < find.length; i++) {
+    str = str.replace(find[i], replace[i]);
   }
-  return replaceString;
+  return str;
 };
-	ConfigYMLTemplate = ConfigYMLTemplate.replaceArray(find, replace);
-	 
-	 // Create dummy <a> element using JavaScript.
-	 var hidden_a = document.createElement('a');
-	 
-	 // add texts as a href of <a> element after encoding.
-	 hidden_a.setAttribute('href', 'data:text/plain;charset=utf-8, '+ encodeURIComponent(ConfigYMLTemplate));
-	 
-	 // also set the value of the download attribute
-	 hidden_a.setAttribute('download', "_config.yml");
-	 document.body.appendChild(hidden_a);
-	 
-	 // click the link element
-	 hidden_a.click();
-	 document.body.removeChild(hidden_a);
-  }
 
+function startDownload() {
+  const find = [
+    "REPONAME", "SITETITLE", "SITESUBTITLE", "SITEDESCRIPTION",
+    "SITEAUTHORFULL", "SITEDATESTART", "SITEEMAIL", "SITEWEBSITE",
+    "SITETWITTER", "SITEGITHUB", "SITEFACEBOOK", "SITEINSTAGRAM",
+    "SITEGOOGLEANALYTICSG4", "SITEFONTCHOICE", "SITECOLORCHOICE", "SITEACCENTCHOICE"
+  ];
 
+  const replace = [
+    document.getElementById("site_repo").value,
+    document.getElementById("site_title").value,
+    document.getElementById("site_subtitle").value,
+    document.getElementById("site_desc").value,
+    document.getElementById("site_owner").value,
+    document.getElementById("site_start").value,
+    document.getElementById("site_email").value,
+    document.getElementById("site_website").value,
+    document.getElementById("site_twitter").value,
+    document.getElementById("site_github").value,
+    document.getElementById("site_facebook").value,
+    document.getElementById("site_instagram").value,
+    document.getElementById("site_googleg4").value,
+    document.getElementById("fontchoice").value,
+    document.getElementById("colorchoice").value,
+    document.getElementById("accentcolorchoice").value
+  ];
+
+  const finalYML = ConfigYMLTemplate.replaceArray(find, replace);
+
+  const blob = new Blob([finalYML], { type: 'text/plain' });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = "_config.yml";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
 </script>
+
 </body>
 </html>
