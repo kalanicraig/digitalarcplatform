@@ -87,10 +87,11 @@ quoteattribution: ""
       <option value="red">Red</option>
       <option value="tan">Tan</option>
       <option value="teal">Teal</option>
+      <option value="whitewithaccent">White with accent color (see below)</option>
     </select>
   </label><br/>
 
-  <label>Accent Color
+  <label>Accent Color (if you chose White)
     <select id="accentcolorchoice" name="accentcolorchoice">
       <option value="accent-darkred">Dark Red</option>
       <option value="accent-blue">Blue</option>
@@ -210,6 +211,7 @@ fontchoice: SITEFONTCHOICE
 #colorchoice: red # Black, crimson and grey
 #colorchoice: lavenderred # Purple-grey with orange-red
 #colorchoice: dusk # Dusky purple and olive green
+#colorchoice: whitewithaccent # White with an accent color (see below)
 
 colorchoice: SITECOLORCHOICE
 
@@ -323,22 +325,22 @@ function startDownload() {
   ];
 
   const replace = [
-    document.getElementById("site_repo").value,
-    document.getElementById("site_title").value,
-    document.getElementById("site_subtitle").value,
-    document.getElementById("site_desc").value,
-    document.getElementById("site_owner").value,
-    document.getElementById("site_start").value,
-    document.getElementById("site_email").value,
-    document.getElementById("site_website").value,
-    document.getElementById("site_twitter").value,
-    document.getElementById("site_github").value,
-    document.getElementById("site_facebook").value,
-    document.getElementById("site_instagram").value,
-    document.getElementById("site_googleg4").value,
-    document.getElementById("fontchoice").value,
-    document.getElementById("colorchoice").value,
-    document.getElementById("accentcolorchoice").value
+    document.getElementById("site_repo")?.value || "",
+    document.getElementById("site_title")?.value || "",
+    document.getElementById("site_subtitle")?.value || "",
+    document.getElementById("site_desc")?.value || "",
+    document.getElementById("site_owner")?.value || "",
+    document.getElementById("site_start")?.value || "",
+    document.getElementById("site_email")?.value || "",
+    document.getElementById("site_website")?.value || "",
+    document.getElementById("site_twitter")?.value || "",
+    document.getElementById("site_github")?.value || "",
+    document.getElementById("site_facebook")?.value || "",
+    document.getElementById("site_instagram")?.value || "",
+    document.getElementById("site_googleg4")?.value || "",
+    document.getElementById("fontchoice")?.value || "",
+    document.getElementById("colorchoice")?.value || "",
+    document.getElementById("accentcolorchoice")?.value || ""
   ];
 
   const finalYML = ConfigYMLTemplate.replaceArray(find, replace);
