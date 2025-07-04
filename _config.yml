@@ -1,11 +1,11 @@
-# NEEDS SOME INTRO: A "Why are we here" section
-
+##############################################
+# START YOUR CONFIGURATION HERE! For more info, visit https://digitalarcplatform.github.io/documentation/docs/publishSite/
 # THEME.
 #---------------------
 #remote-theme: digitalarcplatform
 
 ##############################################
-# WHAT IS ALL THIS STUFF?
+# WHAT IS ALL THIS STUFF? SOME VOCABULARY.
 #---------------------
 # _config is easy. Most web sites have configuration files.
 # .yml means YAML. It's the data that runs your site.
