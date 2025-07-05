@@ -26,8 +26,12 @@ quoteattribution: ""
     <input type="text" id="site_repo" name="site_repo" placeholder="yourname/yourrepo">
   </label><br/>
 
-  <label>Site Owner
+  <label>Site Owner (long with spaces, e.g. "Your Full Name Here")
     <input type="text" id="site_owner" name="site_owner" placeholder="Author or community name">
+  </label><br/>
+
+  <label>Site Owner (abbreviation with no spaces, e.g. "FullName")
+    <input type="text" id="site_ownershort" name="site_ownershort" placeholder="Author Short Name">
   </label><br/>
 
   <label>Description
@@ -163,8 +167,8 @@ author: "SITEAUTHORSHORT"
 authorname : "SITEAUTHORFULL"
 
 # To change the photo on your homepage, open the assets folder in your Github repo, then open the img folder. Upload a photo there. Add only the name of the photo and its extension here. E.g. "alternate_logo.png")
-# Main author of the website.
 sitelogo: "site_logo.png"
+placeholderimg: "placeholder.png"
 
 # What year did you start up this community project?
 sitedate : SITEDATESTART
@@ -319,7 +323,7 @@ String.prototype.replaceArray = function(find, replace) {
 function startDownload() {
   const find = [
     "REPONAME", "SITETITLE", "SITESUBTITLE", "SITEDESCRIPTION",
-    "SITEAUTHORFULL", "SITEDATESTART", "SITEEMAIL", "SITEWEBSITE",
+    "SITEAUTHORFULL", "SITEAUTHORSHORT", "SITEDATESTART", "SITEEMAIL", "SITEWEBSITE",
     "SITETWITTER", "SITEGITHUB", "SITEFACEBOOK", "SITEINSTAGRAM",
     "SITEGOOGLEANALYTICSG4", "SITEFONTCHOICE", "SITECOLORCHOICE", "SITEACCENTCHOICE"
   ];
@@ -330,6 +334,7 @@ function startDownload() {
     document.getElementById("site_subtitle")?.value || "",
     document.getElementById("site_desc")?.value || "",
     document.getElementById("site_owner")?.value || "",
+    document.getElementById("site_ownershort")?.value || "",
     document.getElementById("site_start")?.value || "",
     document.getElementById("site_email")?.value || "",
     document.getElementById("site_website")?.value || "",
