@@ -1,6 +1,37 @@
 $dark-top-bar: VALUE !default;
 
 /** =================================
+Dark/light BG settings
+================================= **/
+
+	@mixin nav-bar-colors($dark-top-bar) {
+	  @if $dark-top-bar == true {
+		background-color: $dark-bg;
+		color: $dark-text-color;
+	  } @else {
+		background-color: $main-bg;
+		color: $main-text-color;
+	  }
+	}
+	
+	@mixin nav-bar-link($dark-top-bar) {
+	  @if $dark-top-bar == true {
+		color: $dark-link;
+	  } @else {
+		color: $main-link;
+	  }
+	}
+	
+	@mixin nav-bar-hover($dark-top-bar) {
+	  @if $dark-top-bar == true {
+		color: $dark-link-hover;
+	  } @else {
+		color: $main-link-hover;
+	  }
+	}
+		
+
+/** =================================
 Base settings
 ================================= **/
 
@@ -36,16 +67,15 @@ Base settings
 	}
 
 	.darkbg{
-	  background-color: $dark-bg;
-	  color: $dark-text-color;
+	  @include nav-bar-colors($dark-top-bar)
 	}
 
 	.darkbg a {
-		color: $dark-link;
+	  @include nav-bar-link($dark-top-bar)
 	}
 
 	.darkbg a:hover, .accentbg a:focus {
-		color: $dark-link-hover;
+	  @include nav-bar-hover($dark-top-bar)
 	}
 
 	.accentbg {
@@ -191,33 +221,7 @@ Nav and Menu Elements
 		text-transform: uppercase;
 	}
 
-	@mixin nav-bar-colors($dark-top-bar) {
-	  @if $dark-top-bar == true {
-		background-color: $dark-bg;
-		color: $dark-text-color;
-	  } @else {
-		background-color: $main-bg;
-		color: $main-text-color;
-	  }
-	}
-	
-	@mixin nav-bar-link($dark-top-bar) {
-	  @if $dark-top-bar == true {
-		color: $dark-link;
-	  } @else {
-		color: $main-link;
-	  }
-	}
-	
-	@mixin nav-bar-hover($dark-top-bar) {
-	  @if $dark-top-bar == true {
-		color: $dark-link-hover;
-	  } @else {
-		color: $main-link-hover;
-	  }
-	}
-		
-	.pagetitle, .top-bar, .top-bar ul,  .top-bar ul {
+	.pagetitle, .top-bar, .top-bar ul, .top-bar ul {
 	  @include nav-bar-colors($dark-top-bar)
 	}
 	
