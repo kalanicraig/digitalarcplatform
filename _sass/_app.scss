@@ -696,10 +696,32 @@ BLOG POST LISTINGS
 }
 
 /** =================================
-Filter Buttons
+Filter Buttons and other Buttons
 ================================= **/
 
-    /* Style the filter buttons */
+/* Style regular buttons */
+   .button {
+		border: 2px solid $dark-bg;
+        border-radius: 5px;
+		background-color: $dark-bg;
+		color: $dark-text-color;
+        transition: background-color 0.3s ease;
+        align-items: center; /* Center button text vertically */
+    }
+
+    .button:hover {
+		border-color: $dark-link-hover;
+		background-color: $main-bg;
+		color: $main-text-color;
+   }
+
+    .button.active {
+        background-color: lighten($dark-link, 15%);
+		color: $dark-text-color;
+    }
+
+
+/* Style the filter buttons */
     .buttons-container {
         display: flex;
         flex-wrap: wrap;
