@@ -20,9 +20,8 @@ format: item
 		{% assign embedcode = embedarray[1] %}
 	{% endif %}
 	{% if embedcode.size > 0 %}
-	<video controls class="responsive-embed">
-	  <iframe width="350" height="350" src="https://www.youtube.com/embed/{{ embedcode }}" frameborder="0" allowfullscreen></iframe>
-	</video>
+	  <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ embedcode }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen  class="responsive-embed"></iframe>
+
 	{% endif %}
 {% else %}
 	{% if item.photo %}

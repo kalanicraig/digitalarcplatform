@@ -716,7 +716,7 @@ Filter Buttons and other Buttons
    }
 
     .button.active {
-        background-color: lighten($dark-link, 15%);
+		background-color: lighten($dark-link, 15%);
 		color: $dark-text-color;
     }
 
